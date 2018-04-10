@@ -1,0 +1,54 @@
+html {
+	box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $light;
+	font-size: 16px;
+
+	background: $background;
+
+	overflow-x: hidden;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include mobile {
+		max-width: 680px;
+	}
+
+	@include tablet {
+		width: 750px;
+	}
+
+	@include medium {
+		width: 960px;
+	}
+
+	@include desctop {
+		width: 1170px;
+	}
+}

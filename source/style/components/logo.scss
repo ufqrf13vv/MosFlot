@@ -1,0 +1,16 @@
+.logo {
+	display: flex;
+	align-items: center;
+
+	text-decoration: none;
+
+	& > img {
+		margin-right: 45px;
+	}
+
+	&__text {
+		color: $grey-text;
+
+		line-height: 24px;
+	}
+}

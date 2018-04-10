@@ -1,0 +1,66 @@
+.main-menu {
+	padding-bottom: 20px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		list-style: none;
+
+		padding-left: 0;
+		margin: 0;
+	}
+
+	&__item {
+		font-size: 14px;
+		font-family: $roman;
+
+		text-transform: uppercase;
+
+		&--blue {
+			font-family: $bold;
+
+			color: $blue-text;
+		}
+
+		&--costing {
+			& > a {
+				display: block;
+
+				background: $orange;
+				border-radius: 30px;
+
+				padding: 19px 65px 19px 20px;
+
+				color: $white;
+
+				text-decoration: none;
+
+				position: relative;
+
+				&::after {
+					content: '';
+
+					display: block;
+					width: 30px;
+					height: 30px;
+
+					background: url('../img/calc-icon.png') no-repeat 0 0;
+
+					position: absolute;
+					top: 12px;
+					right: 20px;
+				}
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
