@@ -1,0 +1,93 @@
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 50px;
+
+	&__stars {
+		display: flex;
+
+		list-style: none;
+
+		padding-left: 0;
+
+		margin: 0;
+		margin-right: 35px;
+	}
+
+	&__star {
+		width: 19px;
+		height: 19px;
+
+		background: url('../img/big-stars.png') no-repeat 0 0;
+
+		&:not(:last-child) {
+			margin-right: 4px;
+		}
+
+		&--empty {
+			background-position: -27px 0;
+		}
+	}
+
+	&__count {
+		font-family: $medium;
+		font-size: 24px;
+
+		color: $blue-text;
+	}
+
+	&__feedbacks {
+		list-style: none;
+
+		padding-left: 0;
+		margin: 0;
+
+		&-item {
+			display: flex;
+			align-items: center;
+		}
+
+		&-val {
+			font-family: $roman;
+
+			&::after {
+				content: url('../img/micro-star.png');
+
+				margin-left: 15px;
+				margin-right: 13px;
+			}
+		}
+
+		&-scale {
+			width: 100px;
+			height: 10px;
+
+			background-color: $background;
+			border-radius: 15px;
+
+			margin-right: 12px;
+
+			position: relative;
+
+			& > span {
+				height: 100%;
+				width: 35%;
+
+				background-color: $orange;
+				border-radius: 15px;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+
+		&-count {
+			font-family: $medium;
+
+			color: #a2b0bb;
+		}
+	}
+}

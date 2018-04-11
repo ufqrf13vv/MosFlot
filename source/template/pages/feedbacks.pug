@@ -1,0 +1,66 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Интересное', 'Отзывы'])
+
+			h2.main-title.main-title--left Отзывы
+			.wrapper
+				aside.aside
+					.aside__block
+						.aside__title Интересное
+						ul.aside__menu
+							li.aside__menu-item.aside__menu-item--active
+								a.aside__menu-link(href="#") Контакты
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Миссия
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Лицензии
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Договора, реквизиты и оплата
+				section.content.feedbacks
+					.feedbacks__header
+						.feedbacks__title Общая оценка нашей работы
+						.rating
+							ul.rating__stars
+								li.rating__star
+								li.rating__star
+								li.rating__star
+								li.rating__star
+								li.rating__star.rating__star--empty
+							.rating__count 4.5 из 5
+						.feedbacks__wrapper
+							ul.rating__feedbacks
+								li.rating__feedbacks-item
+									.rating__feedbacks-val 5
+									.rating__feedbacks-scale
+										span
+									.rating__feedbacks-count 34 отзыва
+								li.rating__feedbacks-item
+									.rating__feedbacks-val 4
+									.rating__feedbacks-scale
+										span
+									.rating__feedbacks-count 14 отзывов
+								li.rating__feedbacks-item
+									.rating__feedbacks-val 3
+									.rating__feedbacks-scale
+										span
+									.rating__feedbacks-count 9 отзыва
+								li.rating__feedbacks-item
+									.rating__feedbacks-val 2
+									.rating__feedbacks-scale
+										span
+									.rating__feedbacks-count 5 отзыва
+								li.rating__feedbacks-item
+									.rating__feedbacks-val 1
+									.rating__feedbacks-scale
+										span
+									.rating__feedbacks-count 2 отзыва
+							.feedbacks__add
+								.feedbacks__sign Здесь Вы можете оставить свой отзыв о нашей работе!
+								a.feedbacks__new(href="") Оставить отзыв
+
+					.feedbacks__list
+						
+

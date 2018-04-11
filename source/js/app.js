@@ -35,8 +35,7 @@
         $('.news-item__slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            centerPadding: '5px',
-            arrows: false,
+            arrows: true,
             autoplay: false
         });
 
