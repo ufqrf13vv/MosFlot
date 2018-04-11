@@ -1,0 +1,61 @@
+.our-ships {
+	background: $white;
+
+	padding-top: 55px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__block {
+		padding: 70px 0;
+
+		&--grey {
+			border-top: 2px solid #e5eef6;
+			border-bottom: 2px solid #e5eef6;
+
+			background: #f6f9fb;
+		}
+	}
+
+	&__header {
+		font-family: $bold;
+		font-size: 20px;
+		line-height: 24px;
+
+		color: $blue-text;
+
+		padding-left: 70px;
+
+		&::before {
+			content: url('../img/small-boat.png');
+			
+			margin-right: 7px;
+		}
+
+		& > span {
+			color: $light-blue;
+		}
+	}
+
+	&__all {
+		display: block;
+
+		font-family: $bold;
+		font-size: 16px;
+
+		color: $orange-text;
+
+		padding: 15px 30px;
+
+		text-decoration: none;
+
+		border: 1px solid $orange-text;
+		border-radius: 30px;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

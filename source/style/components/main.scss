@@ -1,0 +1,31 @@
+.main {
+	background: #f5f8fb;
+
+	line-height: 20px;
+
+	padding: 65px 0;
+
+	& a {
+		color: $blue-text;
+	}
+
+	& ul {
+		list-style-type: none;
+
+		padding-left: 0;
+	}
+
+	& li:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
+	& li::before {
+		content: '-';
+
+		margin-right: 5px;
+	}
+}
+
+.main-content {
+	padding-bottom: 90px;
+}

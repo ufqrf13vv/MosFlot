@@ -1,0 +1,35 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Интересное', 'Новости'])
+
+			h2.main-title.main-title--left Новости
+			.wrapper
+				aside.aside
+					.aside__block
+						.aside__title О нас
+						ul.aside__menu
+							li.aside__menu-item.aside__menu-item--active
+								a.aside__menu-link(href="#") Контакты
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Миссия
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Лицензии
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Договора, реквизиты и оплата
+				section.content.news-item
+					.news-item__block
+						.news-item__images
+							.news-item__main-image
+								img(src="/assets/img/news-item.png", alt="")
+							.news-item__slider
+								.news-item__slide
+									img(src="/assets/img/news-item.png", alt="")
+								.news-item__slide
+									img(src="/assets/img/news-item.png", alt="")
+								.news-item__slide
+									img(src="/assets/img/news-item.png", alt="")
+								.news-item__slide
+									img(src="/assets/img/news-item.png", alt="")

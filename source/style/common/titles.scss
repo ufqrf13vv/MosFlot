@@ -1,0 +1,40 @@
+.main-title {
+	font-family: $bold;
+	font-size: 30px;
+
+	text-align: center;
+	
+	&--logo {
+		padding-top: 100px;
+		margin-top: 0;
+
+		position: relative;
+
+		&::before {
+			content: url('../img/logo.png');
+
+			position: absolute;
+			top: 0;
+		    left: 50%;
+
+		    margin-left: -62px;
+		}
+	}
+
+	&--left {
+		text-align: left;
+
+		margin-bottom: 54px;
+	}
+}
+
+.h3 {
+	font-family: $bold;
+	font-size: 20px;
+
+	margin-top: 0;
+
+	&--blue {
+		color: $dark-blue;
+	}
+}

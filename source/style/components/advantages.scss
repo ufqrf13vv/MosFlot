@@ -1,0 +1,31 @@
+.advantages {
+	padding-top: 55px;
+	padding-bottom: 70px;
+
+	background: $white;
+	
+	&__blocks {
+		display: flex;
+		justify-content: space-between;
+
+		padding-top: 40px;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		width: 13%;
+
+		&-text {
+			font-family: $roman;
+			font-size: 18px;
+			line-height: 22px;
+
+			text-align: center;
+
+			padding-top: 20px;
+		}
+	}
+}

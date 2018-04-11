@@ -3,8 +3,24 @@
 @import 'mixin';
 @import 'base';
 
+@import 'common/titles';
 @import 'components/header';
 @import 'components/logo';
 @import 'components/main-menu';
+@import 'components/breadcrumb';
+@import 'components/slider';
+@import 'components/advantages';
+@import 'components/lease';
+@import 'components/our-ships';
+@import 'components/main';
+@import 'components/aside';
+@import 'components/content';
+@import 'components/faq';
+@import 'components/contracts';
+@import 'components/license';
+@import 'components/contacts';
+@import 'components/news';
+@import 'components/pagination';
 
 @import 'components/footer';
+@import 'components/back-call';

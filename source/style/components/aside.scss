@@ -1,0 +1,54 @@
+.aside {
+	width: 23%;
+
+	&__block {
+		padding-top: 16px;
+
+		background: $white;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+
+	&__title {
+		font-family: $medium;
+		font-size: 18px;
+
+		padding-left: 25px;
+		margin-bottom: 20px;
+
+		color: $lgrey-text;
+	}
+
+	&__menu {
+		list-style: none;
+
+		margin: 0;
+		padding-left: 0;
+
+		&-item {
+			border-left: 2px solid $white;
+		}
+
+		&-item--active,
+		&-item:hover {
+			color: $dark-blue;
+
+			border-color: $dark-blue;
+		}
+
+		&-link {
+			display: block;
+
+			font-family: $roman;
+			font-size: 15px;
+
+			text-decoration: none;
+
+			padding: 16px 10px 16px 25px;
+
+			color: inherit;
+		}
+	}
+}

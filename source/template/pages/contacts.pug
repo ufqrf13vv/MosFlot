@@ -1,0 +1,70 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'О нас', 'Контакты'])
+
+			h2.main-title.main-title--left Контакты
+			.wrapper
+				aside.aside
+					.aside__block
+						.aside__title О нас
+						ul.aside__menu
+							li.aside__menu-item.aside__menu-item--active
+								a.aside__menu-link(href="#") Контакты
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Миссия
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Лицензии
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Договора, реквизиты и оплата
+					.aside__block
+						.aside__title Интересное
+						ul.aside__menu
+							li.aside__menu-item
+								a.aside__menu-link(href="#") FAQ
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Пункт 2
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Пункт 3
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Пункт 4
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Пункт 5
+
+				section.contacts
+					.contacts__row
+						.contacts__row-block
+							.contacts__wrapper.contacts__wrapper--page
+								.contacts__header Судоходная компания МосФлот
+								.contacts__item.contacts__item--phone-orange
+									.contacts__block
+										a.contacts__number.contacts__number--black(href="#") 8 (495) 730-8690
+										.contacts__time.contacts__time--page 10:00 - 22:00
+									.contacts__block
+										a.contacts__number.contacts__number--black(href="#") 8 (495) 730-8690
+										.contacts__time.contacts__time--page Круглосуточно
+								.contacts__item.contacts__item--email-orange
+									.contacts__title.contacts__title--page E-mail:
+									a.contacts__link.contacts__link--blue(href="#") info@mosflot.ru
+								.contacts__item.contacts__item--address-orange
+									.contacts__title.contacts__title--page Адрес офиса и время работы:
+									.contacts__title 123100, Москва, Краснопресненская наб., д.16, стр.1 торгово-пешеходный мост "БАГРАТИОН"(ст.метро "Выставочная") пн-пт с 10 до 19, по договоренности с менеджером также в субботу
+							.contacts__social.contacts__social--page
+								.contacts__social-title.contacts__social-title--page Социальные сети:
+								.contacts__social-icons
+									a.contacts__social-icon.contacts__social-icon--fb(href="#")
+									a.contacts__social-icon.contacts__social-icon--inst(href="#")
+									a.contacts__social-icon.contacts__social-icon--vk(href="#")
+									a.contacts__social-icon.contacts__social-icon--youtube(href="#")
+						.contacts__map
+					.contacts__footer
+						.contacts__header Наш офис
+						.contacts__photos
+							.contacts__photos-item
+								img(src="/assets/img/contacts-photo.png", alt="")
+							.contacts__photos-item
+								img(src="/assets/img/contacts-photo.png", alt="")
+							.contacts__photos-item
+								img(src="/assets/img/contacts-photo.png", alt="")

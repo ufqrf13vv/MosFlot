@@ -1,0 +1,55 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	font-family: $medium;
+	font-size: 13px;
+
+	list-style: none;
+
+	padding: 20px 0;
+	margin: 0;
+
+	color: $light-blue;
+
+	&__item {
+		margin-right: 10px;
+
+		&--dots {
+			margin-left: 10px;
+			margin-right: 20px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color: inherit;
+
+		&:hover,
+		&--active {
+			color: $orange-text;
+		}
+
+		&--btn {
+			padding: 8px 27px;
+
+			border: 1px solid $light-blue;
+			border-radius: 30px;
+
+			&:hover {
+				background: $light-blue;
+
+				color: $white;
+			}
+
+			&:first-child {
+				margin-right: 10px;
+			}
+
+			&:last-child {
+				margin-left: 10px;
+			}
+		}
+	}
+}

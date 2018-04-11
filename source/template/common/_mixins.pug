@@ -1,72 +1,9 @@
-- 
-	var catalogItems = [
-		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
-		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
-		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
-		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
-		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
-		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' }
-	];
--
-	var catalogMenu = [
-		{title: 'Мягкая мебель', items: ['Мягкие диваны и кушетки']},
-		{title: 'Мебель для кухни', items: ['Кухонные гарнитуры', 'Стулья для кухни', 'Столы для кухни', 'Кухонные гарнитуры', 'Стулья для кухни', 'Столы для кухни']},
-		{title: 'Мебель для спальни', items: ['Спальные гарнитуры', 'Шкафы для спальни', 'Кровати для спальни', 'Спальные гарнитуры', 'Шкафы для спальни', 'Кровати для спальни']}
-	]
-
-mixin menu(menuClass, links)
-	ul(class=`${menuClass}__list`)
-		each link in links
-			li(class=`${menuClass}__item`)
-				a(class=`${menuClass}__link`, href="#")= link
-
 mixin breadcrumbs(items)
 	- var n = 0;
-	.breadcrumb
-		while n < items.length - 1
-			.breadcrumb__item
-				a.breadcrumb__link(href="#") #{items[n++]}
-		span.breadcrumb__item--current #{items[n]}
-
-mixin catalogMenu(items) 
-	.catalog-menu
-		each item in items
-			.catalog-menu__item
-				a.catalog-menu__title(href="#") #{item.title}
-				.catalog-menu__list
-					each sub in item.items
-						a(href="#") #{sub}
-
-
-mixin catalogItems(items, icons, secondClass)
-	.catalog
-		each item in items
-			.catalog__item(class=`${secondClass}`)
-				if icons
-					.catalog__item-icons
-						each icon in icons
-							| !{icon}
-				a.catalog__item-image(href="#")
-					img(src=`${item.img}`)
-				.catalog__item-description
-					a.catalog__item-category(href="#") #{item.section}
-					a.catalog__item-name(href="#") #{item.name}
-					.catalog__item-prices
-						.catalog__item-price #{item.price}
-						if item.oldprice
-							.catalog__item-oldprice #{item.oldprice}
-					.catalog__item-links
-						a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
-							include ../../images/svg/shopping-cart.svg
-						a.catalog__item-link.catalog__item-link--small(href="#")
-							include ../../images/svg/star.svg
-						a.catalog__item-link.catalog__item-link--small(href="#")
-							include ../../images/svg/th-list.svg
-
-mixin characteristics(items) 
-	.compare__characteristics
-		each item in items
-			.compare__item
-				.compare__title #{item}
-				.compare__text Характеристика
-				.compare__text Характеристика
+	ul.breadcrumb
+		while n < items.length
+			if (n == items.length - 1)
+				li.breadcrumb__item #{items[n++]}
+			else
+				li.breadcrumb__item
+					a.breadcrumb__link(href="#") #{items[n++]}

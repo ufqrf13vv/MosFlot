@@ -1,0 +1,51 @@
+.lease {
+	background: $lgrey-bg;
+
+	padding-top: 50px;
+	padding-bottom: 80px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		padding-top: 40px;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		width: 27%;
+
+		position: relative;
+
+		&:not(:last-child)::after {
+			content: url('../img/arrow.png');
+
+			position: absolute;
+			top: 20%;
+			right: -20%;
+		}
+
+		&-image {
+			display: flex;
+			align-items: flex-end;
+
+			height: 70px;
+
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 24px;
+
+		text-align: center;
+
+		& > span {
+			font-family: $bold;
+		}
+	}
+}

@@ -1,213 +1,242 @@
-.slider {
+.main-slider {
+	background: $white;
 
-	&--main {
-		background: linear-gradient(to bottom, $main 10%, $white 60%);
+	position: relative;
 
-		padding: 28px 0;
+	&--small {
+		padding-top: 40px;
+		padding-bottom: 70px;
 
-		@include small_mobile {
-			display: none;	
+		background: transparent;
+	}
+
+	&::before {
+		content: '';
+
+		display: block;
+		height: 100%;
+		width: 15%;
+
+		background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		z-index: 10;
+	}
+
+	&::after {
+		content: '';
+
+		display: block;
+		height: 100%;
+		width: 15%;
+
+		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		z-index: 10;
+	}
+
+	&__slide > img{
+		margin: auto;
+		width: 100%;
+	}
+
+	&__slide {
+		margin: 0 7px;
+
+		&-wrapper {
+			display: flex;
 		}
 	}
 
-	&__wrapper {
+	&__slide.slick-current {
 		position: relative;
 
-		&--small {
-			display: flex;
-			justify-content: space-between;
+		&::after {
+			content: '';
 
-			margin-bottom: 60px;
+			display: block;
+		    height: 155px;
+		    width: 100%;
+
+		    background: transparent;
+		    background: linear-gradient(to top, rgba(102, 152, 202, .9), rgba(255, 255, 255, 0));
+		    
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
 		}
+	}
+
+	&__slide--small.slick-current::after {
+		display: none;
 	}
 
 	& .slick-arrow {
-		height: 43px;
-		width: 28px;
+		width: 65px;
+		height: 65px;
+
+		background: transparent;
+		border: 0;
 
 		font-size: 0;
 
-		background: $black;
-		border: none;
+		padding: 0;
+		margin-top: -32.5px;
 
 		position: absolute;
 		top: 50%;
 
-		margin-top: -21px;
-
-		cursor: pointer;
+		z-index: 20;
 	}
 
 	& .slick-prev {
-		background: url('../img/arrows.png') no-repeat -3px 0;
+		background: url('../img/arrow-prev.png') no-repeat 0 0;
 
-		left: -50px;
+		left: -33px;
 	}
 
 	& .slick-next {
-		background: url('../img/arrows.png') no-repeat -53px 0;
+		background: url('../img/arrow-next.png') no-repeat 0 0;
 
-		right: -50px;
-	}
-	
-	&__slide {
-		padding: 4px;
-
-		background: $white;
-		box-shadow: 0px 0px 3px 3px rgba(235,235,235,1);
-		border-radius: 3px;
-
-		position: relative;
-
-		&--small {
-			display: flex !important;
-
-			padding: 0;
-
-			box-shadow: none;
-			border: 1px solid $grey;
-
-			margin: 0 15px;
-		}
-
-		&-info {
-			width: 350px;
-
-			font-size: 26px;
-
-			background: rgba(247, 158, 55, .9);
-			color: $white;
-
-			text-decoration: none;
-
-			position: absolute;
-			bottom: 30px;
-			left: 30px;
-
-			@include tablet {
-				padding: 10px;	
-			}
-
-			@include medium {
-				padding: 15px;	
-			}
-
-			@include desctop {
-				padding: 27px 30px;
-			}
-
-			&:hover {
-				opacity: .9;
-			}
-		}
-
-		&-text {
-			font-family: $bold;
-
-			line-height: 30px;
-
-			margin-bottom: 20px;
-		}
-
-		& > img {
-			width: 100%;
-		}
+		right: -33px;
 	}
 
 	& .slick-dots {
 		display: flex;
+		justify-content: center;
+
+		width: 100%;
 
 		list-style: none;
 
-		padding-left: 0;
+		padding: 0;
 		margin: 0;
 
 		position: absolute;
-		right: 30px;
-		bottom: 30px;
-	}
+		bottom: 20px;
+		left: 0;
 
-	& .slick-dots > li {
-		width: 20px;
-		height: 20px;
+		z-index: 20;
 
-		background: $white;
+		& > li {
+			width: 10px;
+			height: 10px;
 
-		border: 3px solid $white;
-		border-radius: 50%;
+			border: 1px solid $white;
+			border-radius: 50%;
 
-		cursor: pointer;
+			cursor: pointer;
 
-		& > button {
-			border: none;
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
 
+			&.slick-active {
+				background: $white;
+			}
+		}
+
+		& button {
 			background: transparent;
+			border: none;
 
 			font-size: 0;
 		}
+	}
 
-		&:not(:last-child) {
-			margin-right: 20px;
+	&__img {
+		margin-right: 30px;
+
+		position: relative;
+
+		&::after {
+			content: '';
+
+			display: block;
+		    height: 155px;
+		    width: 100%;
+
+		    background: transparent;
+		    background: linear-gradient(to top, rgba(42, 112, 181, 1), rgba(255, 255, 255, 0));
+		    
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
 		}
 
-		&.slick-active {
-			background: $blue;
+		&-title {
+			font-family: $bold;
+			font-size: 20px;
+
+			color: $white;
+
+			text-transform: capitalize;
+
+			position: absolute;
+			bottom: 20px;
+
+			z-index: 10;
+
+			&::before {
+				content: '';
+
+				display: inline-block;
+				width: 16px;
+				height: 4px;
+
+				margin-right: 12px;
+				margin-bottom: 5px;
+
+				background: $white;
+			}
+		}
+
+		&__text {
+			font-size: 15px;
+
+			&--normal {
+				font-family: $roman;
+			}
 		}
 	}
 
-	&__text {
-		text-decoration: none;
+	&__description {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
-		color: $blue;
+	&__row {
+		display: flex;
+	}
 
-		flex: 1;
+	&__title {
+		font-family: $bold;
+		font-size: 18px;
 
-		@include mobile {
-			padding: 7px;
+		margin-bottom: 5px;
 
-			font-size: 12px;
-			line-height: 16px;
+		&--small {
+			font-size: 15px;
+
+			margin-right: 12px;
 		}
+	}
 
-		@include tablet {
-			font-size: 14px;
-			line-height: 16px;
+	&__more {
+		font-family: $bold;
 
-			padding: 10px;
-		}
-
-		@include medium {
-			font-size: 16px;
-			line-height: 24px;
-
-			padding: 16px;
-		}
+		color: $orange-text;
 
 		&:hover {
 			opacity: .7;
-		}
-	}
-
-	&__image {
-		border-right: 1px solid $grey;
-
-		@include mobile {
-			height: 70px;
-			width: 70px;
-		}
-
-		@include tablet {
-			height: 80px;
-			width: 80px;
-		}
-
-		@include medium {
-			height: 100px;
-			width: 100px;
-		}
-
-		& > img {
-			height: 100%;
 		}
 	}
 }
