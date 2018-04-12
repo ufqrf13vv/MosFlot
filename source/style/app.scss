@@ -4,6 +4,8 @@
 @import 'base';
 
 @import 'common/titles';
+@import 'components/sort';
+
 @import 'components/header';
 @import 'components/logo';
 @import 'components/main-menu';
@@ -23,6 +25,12 @@
 @import 'components/pagination';
 @import 'components/feedbacks';
 @import 'components/rating';
+@import 'components/events';
+@import 'components/ships-list';
+@import 'components/order-form';
+@import 'components/our-offers';
+@import 'components/search';
+@import 'components/parkings';
 
 @import 'components/footer';
 @import 'components/back-call';

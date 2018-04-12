@@ -1,0 +1,57 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Расчет стоимости мероприятия'])
+
+			h2.main-title.main-title--left Расчет стоимости мероприятия
+			.wrapper
+				aside.aside
+					.order-form
+						.order-form__row.order-form__row--start
+							label.order-form__label(for="") Кол-во человек:
+							select.order-form__select
+								option до 35 (60) человек
+								option до 35 (60) человек
+								option до 35 (60) человек
+						.order-form__row.order-form__row--start
+							label.order-form__label(for="") Дата мероприятия:
+							input.order-form__input.order-form__input--date(type="text")
+						.order-form__row.order-form__row--start
+							label.order-form__label(for="") Питание:
+							.order-form__radio-wrap
+								input.order-form__radio(type="radio", name="type", id="banket", checked="checked")
+								label.order-form__radio-label(for="banket") Банкет
+								input.order-form__radio(type="radio", name="type", id="furshet")
+								label.order-form__radio-label(for="furshet") Фуршет									
+						.order-form__row.order-form__row--start
+							label.order-form__label(for="") Кол-во часов:
+							input.order-form__input(type="text", placeholder="5")
+						input.order-form__submit.order-form__submit--tall(type="submit", value="Рассчитать мероприятие")
+
+
+				section.content
+					.ships-list
+						- var x = 8;
+						- for (var i = 0; i <= x; i++) {
+							.ships-list__item
+								.ships-list__item-photo
+									img(src="/assets/img/ship-photo.jpg", alt="")
+								.ships-list__item-desc
+									.ships-list__item-block
+										.ships-list__item-title.ships-list__item-title--main Теплоход вдохновение
+									.ships-list__item-block
+										span <b>Аренда:</b> 22 000 руб/час
+									.ships-list__item-block
+										span <b>Банкет:</b> 50 000 руб.
+									.ships-list__item-block
+										span <b>Обслуживание:</b> 10% от стоимости питания: 5000 руб.
+									.ships-list__item-block
+										.ships-list__item-row.ships-list__item-row--start.ships-list__item-row--mb
+											<b>Итого: </b>
+											span.ships-list__item-price 77 000 
+												span руб.
+										.ships-list__item-row.ships-list__item-row--center
+											a.ships-list__item-order(href="#") Заказать
+						- }

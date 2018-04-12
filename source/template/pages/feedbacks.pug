@@ -21,7 +21,8 @@ block content
 								a.aside__menu-link(href="#") Договора, реквизиты и оплата
 				section.content.feedbacks
 					.feedbacks__header
-						.feedbacks__title Общая оценка нашей работы
+						.feedbacks__title-wrapper
+							.title-grey Общая оценка нашей работы
 						.rating
 							ul.rating__stars
 								li.rating__star
@@ -53,7 +54,7 @@ block content
 										span
 									.rating__feedbacks-count 5 отзыва
 								li.rating__feedbacks-item
-									.rating__feedbacks-val 1
+									.rating__feedbacks-val.rating__feedbacks-val--empty 1
 									.rating__feedbacks-scale
 										span
 									.rating__feedbacks-count 2 отзыва
@@ -62,5 +63,25 @@ block content
 								a.feedbacks__new(href="") Оставить отзыв
 
 					.feedbacks__list
-						
-
+						.feedbacks__list-header
+							.title-grey Отзывы
+							.sort
+								.sort__title Сортировка:
+								select.sort__select
+									option(value="date") По дате
+									option(value="rating") По рейтингу
+						- var x = 7;
+							- for (var i = 0; i <= x; i++) {
+								.feedbacks__list-item
+									.feedbacks__list-data
+										ul.rating__stars.rating__stars--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--miniempty
+										.feedbacks__list-name Иван Иванов
+										.feedbacks__list-date 13.05.2017
+									.feedbacks__list-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora eligendi saepe omnis, perferendis unde dolores, neque commodi explicabo inventore quae recusandae eos rerum itaque eaque nihil amet accusantium earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus vel enim, magni dolorem, beatae nobis minus illo in, soluta veniam quibusdam doloremque saepe molestiae necessitatibus. Doloribus laboriosam, vero necessitatibus et.
+							- }
+						include ../common/_pagination

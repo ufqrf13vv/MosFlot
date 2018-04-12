@@ -12,7 +12,7 @@
             menu.fadeOut();
         }
 
-        //  Главный слайдер
+        //  Main slider
         $('#main-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -22,7 +22,7 @@
             centerMode: true,
             autoplay: false
         });
-
+        //  Small slider
         $('.main-slider--small').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -31,9 +31,16 @@
             centerMode: true,
             autoplay: false
         });
-
+        //  News slider
         $('.news-item__slider').slick({
             slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: false
+        });
+        //  Events slider
+		$('#events-slider').slick({
+			slidesToShow: 5,
             slidesToScroll: 1,
             arrows: true,
             autoplay: false

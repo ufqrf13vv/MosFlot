@@ -22,14 +22,7 @@
 		width: 35%;
 	}
 
-	&__title {
-		font-family: $bold;
-		font-size: 24px;
-
-		color: #b6c1cb;
-
-		text-align: center;
-
+	&__title-wrapper {
 		margin-bottom: 35px;
 	}
 
@@ -62,6 +55,50 @@
 	}
 
 	&__list {
-		padding: 35px 30px 10px 30px;
+		padding: 35px 30px 20px 30px;
+
+		&-header {
+			display: flex;
+			justify-content: space-between;
+
+			margin-bottom: 20px;
+		}
+
+		&-item {
+			display: flex;
+
+			padding: 17px 15px;
+
+			border: 2px solid $background;
+			border-radius: 8px;
+
+			&:not(:last-child) {
+				margin-bottom: 13px;
+			}
+		}
+
+		&-data {
+			width: 20%;
+
+			padding-right: 15px;
+		}
+
+		&-name {
+			font-family: $medium;
+
+			margin-bottom: 13px;
+		}
+
+		&-date {
+			font-family: $roman;
+			font-size: 13px;
+		}
+
+		&-text {
+			width: 80%;
+
+			font-size: 14px;
+			line-height: 22px;
+		}
 	}
 }

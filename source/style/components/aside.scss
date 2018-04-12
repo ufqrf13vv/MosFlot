@@ -2,8 +2,6 @@
 	width: 23%;
 
 	&__block {
-		padding-top: 16px;
-
 		background: $white;
 
 		&:not(:last-child) {
@@ -15,7 +13,9 @@
 		font-family: $medium;
 		font-size: 18px;
 
+		padding-top: 25px;
 		padding-left: 25px;
+
 		margin-bottom: 20px;
 
 		color: $lgrey-text;
@@ -27,12 +27,8 @@
 		margin: 0;
 		padding-left: 0;
 
-		&-item {
-			border-left: 2px solid $white;
-		}
-
-		&-item--active,
-		&-item:hover {
+		&-item--active &-link,
+		&-item:hover &-link {
 			color: $dark-blue;
 
 			border-color: $dark-blue;
@@ -46,9 +42,32 @@
 
 			text-decoration: none;
 
+			border-left: 2px solid $white;
+
 			padding: 16px 10px 16px 25px;
 
 			color: inherit;
+		}
+
+		&-sublist {
+			list-style: none;
+
+			padding-left: 43px;
+
+			&-item:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			&-link {
+				color: inherit;
+
+				text-decoration: none;
+
+				&:hover {
+					border-bottom: 1px solid #7f7f7f;
+					box-shadow: 0px 1px 1px 0px #bfbfbf;
+				}
+			}
 		}
 	}
 }

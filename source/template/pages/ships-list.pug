@@ -1,0 +1,55 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Наши теплоходы'])
+
+			h2.main-title.main-title--left Наши теплоходы
+			.wrapper
+				aside.aside
+					.aside__block
+						.aside__title Варианты теплоходов
+						ul.aside__menu
+							li.aside__menu-item.aside__menu-item--active
+								a.aside__menu-link(href="#") До 35 (60) человек
+							li.aside__menu-item
+								a.aside__menu-link(href="#") До 90 (150) человек
+							li.aside__menu-item
+								a.aside__menu-link(href="#") До 160 (500) человек
+							li.aside__menu-item
+								a.aside__menu-link(href="#") До 500 (200) человек
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Панорамные
+				section.content
+					.search
+						input.search__input(type="text")
+						ul.search__list
+							li.search__item Теплоход Вдохновение
+							li.search__item Теплоход Вдохновение
+							li.search__item Теплоход Вдохновение
+							li.search__item Теплоход Вдохновение
+							li.search__item Теплоход Вдохновение
+					.ships-list
+							- var x = 11;
+							- for (var i = 1; i <= x; i++) {
+								.ships-list__item
+									.ships-list__item-photo
+										img(src="/assets/img/ship-photo.jpg", alt="")
+									.ships-list__item-desc
+										.ships-list__item-block
+											.ships-list__item-title.ships-list__item-title--main Теплоход вдохновение
+										.ships-list__item-block
+											.ships-list__item-title Вместимость:
+											.ships-list__item-row
+												span Банкет:
+												span до 30 чел
+											.ships-list__item-row
+												span Фуршет:
+												span до 60 чел
+										.ships-list__item-block
+											.ships-list__item-title Аренда:
+											.ships-list__item-row от 4 500 руб/час
+											.ships-list__item-row
+												a.ships-list__item-more(href="#") Подробнее
+							- }

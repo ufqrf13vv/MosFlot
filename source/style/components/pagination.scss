@@ -1,6 +1,7 @@
 .pagination {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	font-family: $medium;
 	font-size: 13px;
@@ -22,6 +23,8 @@
 	}
 
 	&__link {
+		display: block;
+
 		text-decoration: none;
 
 		color: inherit;

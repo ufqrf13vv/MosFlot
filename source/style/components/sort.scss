@@ -1,0 +1,25 @@
+.sort {
+	display: flex;
+	align-items: center;
+
+	font-family: $roman;
+	font-size: 14px;
+
+	&__title {
+		margin-right: 15px;
+	}
+
+	&__select {
+		width: 200px;
+
+		appearance: none;
+
+	    background: url('../img/icon/select-open.png') no-repeat 92% 50%, #e5eef6;
+	    border: none;
+	    border-radius: 8px;
+
+	    color: #afbdc9;
+
+    	padding: 9px 30px 9px 15px;
+	}
+}		

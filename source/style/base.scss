@@ -58,3 +58,19 @@ img {
 	justify-content: space-between;
 	align-items: flex-start;
 }
+
+.page ul {
+	padding-left: 0;
+
+	& li {
+		list-style-type: none;
+
+		&::before {
+			content: '•';
+
+			margin-right: 15px;
+
+			color: #9cabb8;
+		}
+	}
+}

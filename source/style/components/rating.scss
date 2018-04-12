@@ -14,13 +14,18 @@
 
 		margin: 0;
 		margin-right: 35px;
+
+		&--mini {
+			margin-right: 0;
+			margin-bottom: 12px;
+		}
 	}
 
 	&__star {
 		width: 19px;
 		height: 19px;
 
-		background: url('../img/big-stars.png') no-repeat 0 0;
+		background: url('../img/icon/big-stars.png') no-repeat 0 0;
 
 		&:not(:last-child) {
 			margin-right: 4px;
@@ -28,6 +33,20 @@
 
 		&--empty {
 			background-position: -27px 0;
+		}
+
+		&--mini {
+			width: 13px;
+			height: 13px;
+
+			background: url('../img/icon/mini-stars.png') no-repeat 0 0;
+		}
+
+		&--miniempty {
+			width: 13px;
+			height: 13px;
+
+			background: url('../img/icon/mini-stars.png') no-repeat -21px 0;
 		}
 	}
 
@@ -53,10 +72,14 @@
 			font-family: $roman;
 
 			&::after {
-				content: url('../img/micro-star.png');
+				content: url('../img/icon/micro-star.png');
 
 				margin-left: 15px;
 				margin-right: 13px;
+			}
+
+			&--empty::after {
+				content: url('../img/icon/micro-star-empty.png');
 			}
 		}
 

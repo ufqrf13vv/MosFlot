@@ -1,0 +1,153 @@
+.order-form {
+	font-family: $roman;
+	font-size: 14px;
+
+	padding: 33px 30px 28px 30px;
+	margin-bottom: 30px;
+
+	background: $white;
+
+	&__title {
+		font-family: $bold;
+		font-size: 18px;
+		line-height: 24px;
+
+		text-align: center;
+
+		color: $blue-text;
+
+		margin-bottom: 25px;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-bottom: 22px;
+
+		&--start {
+			align-items: flex-start;
+		}
+	}
+
+	&__label {
+		display: inline-block;
+
+		margin-bottom: 10px;
+	}
+
+	&__input {
+		width: 100%;
+
+		padding: 8px 15px;
+
+		background: $background;
+		border: none;
+		border-radius: 8px;
+
+		&--phone {
+			padding-left: 40px;
+		}
+
+		&--date {
+			padding-right: 40px;
+
+			background: url('../img/icon/calendar.png') no-repeat 95% 50%, $background;
+		}
+	}
+
+	&__select {
+		@extend .order-form__input;
+
+		padding-right: 30px;
+
+		appearance: none;
+
+		font-family: $roman;
+
+		color: $dark-blue;
+
+		background: url('../img/icon/select-open.png') no-repeat 93% 50%, $background;
+	}
+
+	&__submit {
+		width: 100%;
+
+		font-family: $bold;
+		font-size: 16px;
+
+		border: none;
+		border-radius: 30px;
+
+		background: $orange-text;
+
+		color: $white;
+
+		padding: 10px 0;
+		margin-top: 8px;
+
+		cursor: pointer;
+
+		&--tall {
+			font-size: 14px;
+			
+			background: $orange;
+
+			padding: 18px 0;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	&__radio {
+		display: none;
+
+		&-label {
+			font-size: 14px;
+
+			padding-left: 27px;
+
+			color: $lgrey-text;
+
+			position: relative;
+
+			&::before {
+				content: '';
+
+				display: block;
+
+				width: 18px;
+				height: 18px;
+
+				border: 1px solid $lgrey-text;
+				border-radius: 50%;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+
+		&:checked + &-label::after {
+			content: '';
+
+			display: block;
+			width: 8px;
+			height: 8px;
+
+			background: $lgrey-text;
+			border-radius: 50%;
+
+			position: absolute;
+			top: 5px;
+			left: 5px;
+		}
+	}
+}

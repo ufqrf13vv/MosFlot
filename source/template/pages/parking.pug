@@ -1,0 +1,49 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Зеленые стоянки', 'Стоянка'])
+
+			h2.main-title.main-title--left Зеленые стоянки
+			.wrapper
+				aside.aside
+					.aside__block
+						.aside__title Сквер и канал им. Москвы
+						ul.aside__menu
+							li.aside__menu-item.aside__menu-item--active
+								a.aside__menu-link(href="parking.html") Бухта радости
+								ul.aside__menu-sublist
+									li.aside__menu-sublist-item
+										a.aside__menu-sublist-link(href="") Шатёр 1200 кв.м.
+									li.aside__menu-sublist-item
+										a.aside__menu-sublist-link(href="") Шатёр 1200 кв.м.
+									li.aside__menu-sublist-item
+										a.aside__menu-sublist-link(href="") Шатёр 1200 кв.м.
+									li.aside__menu-sublist-item
+										a.aside__menu-sublist-link(href="") Шатёр 1200 кв.м.
+									li.aside__menu-sublist-item
+										a.aside__menu-sublist-link(href="") Шатёр 1200 кв.м.
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Икша
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Пирогово
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Патио
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Хвойный бор
+						.aside__title Центр и Серебряный бор
+						ul.aside__menu
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Викинг
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Серебряный бор
+
+				section.content.page.parkings
+					.parkings__header
+						.parkings__header-block
+							a.parkings__header-link(href="") 3D тур по теплоходу
+						.parkings__header-block
+							a.parkings__header-link(href="") Интерьер
+						.parkings__header-block
+							a.parkings__header-link(href="") Оборудование
