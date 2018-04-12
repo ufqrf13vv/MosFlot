@@ -46,6 +46,13 @@
             autoplay: false
         });
 
+        $('#ships-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: false
+        });
+
         $('.faq__btn').on('click', function() {
             var parent = $(this).parent('.faq');
             var title = $(this).siblings('.faq__title');

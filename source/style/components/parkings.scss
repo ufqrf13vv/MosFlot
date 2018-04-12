@@ -1,7 +1,9 @@
 .parkings {
 	line-height: 26px;
 
-	padding: 0;
+	&--pad {
+		padding: 0;
+	}
 
 	&__header {
 		display: flex;
@@ -57,5 +59,27 @@
 
 		background: url('../img/parking-map.jpg') no-repeat 0 0;
 		background-size: cover;
+	}
+
+	&__content {
+		padding: 40px 25px 25px 25px;
+	}
+
+	&__photos {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin-bottom: -24px;
+	}
+
+	&__photo {
+		width: 250px;
+		height: 167px;
+
+		margin-bottom: 3.3%;
+
+		&:not(:nth-child(3n)) {
+			margin-right: 3.3%;
+		}
 	}
 }

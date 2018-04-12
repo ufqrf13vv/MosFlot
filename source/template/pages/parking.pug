@@ -39,7 +39,7 @@ block content
 							li.aside__menu-item
 								a.aside__menu-link(href="#") Серебряный бор
 
-				section.content.page.parkings
+				section.content.page.parkings.parkings--pad
 					.parkings__header
 						.parkings__header-block
 							a.parkings__header-link(href="") 3D тур по теплоходу
@@ -47,3 +47,61 @@ block content
 							a.parkings__header-link(href="") Интерьер
 						.parkings__header-block
 							a.parkings__header-link(href="") Оборудование
+					.parkings__content
+						h3.title-grey Как добраться
+						p
+							ul
+								li На общественном транспорте. Пригородные автобусы до остановки "Деревня Сорокино".
+						p
+							ul
+								li На автомобиле. На навигаторе вводите адрес "Деревня Сорокино" (13 км. от МКАД по Осташковскому шоссе). Оставить машину можно в непосредственной близости от причала.
+						p
+							ul
+								li На теплоходе от Северного речного вокзала.
+						.parkings__map
+						h3.title-grey Погулки на теплоходах от стоянки
+						.ships-list__slider-wrap
+							.ships-list#ships-slider
+								- var x = 5;
+								- for (var i = 1; i <= x; i++) {
+									.ships-list__item.ships-list__item--slider
+										.ships-list__item-photo
+											img(src="/assets/img/ship-photo.jpg", alt="")
+										.ships-list__item-desc
+											.ships-list__item-block.ships-list__item-block--header
+												.ships-list__item-title.ships-list__item-title--main Теплоход вдохновение
+											.ships-list__item-block
+												.ships-list__item-title.ships-list__item-title--small Билет с ужином:
+												.ships-list__item-price.ships-list__item-price--small 990 руб.
+											.ships-list__item-block
+												.ships-list__item-title.ships-list__item-title--small Билет без ужина:
+												.ships-list__item-price.ships-list__item-price--small 990 руб.
+											.ships-list__item-block
+												.ships-list__item-title.ships-list__item-title--small Детский с ужином:
+												.ships-list__item-row.ships-list__item-row--sa
+													.ships-list__item-price.ships-list__item-price--small 990 руб.
+													.ships-list__item-oldprice 660 руб.
+												.ships-list__item-row.ships-list__item-row--center
+													a.ships-list__item-more(href="#") Подробнее
+								- }
+						h3.title-grey Описание стоянки "Бухта радости"
+						p
+							ul
+								li Пироговское водохранилище. Речная прогулка на теплоходе от СРВ займет 2 часа.
+								li Чистый, песчаный пляж в сосновом лесу
+								li Площадка для пейнтбола
+								li Домики до 100 чел. на территории «Пейнтлэнд парка» (лучше бронировать домик заранее)
+								li Сауна
+								li Кафе
+								li Танцпол
+								li Прокат инвентаря
+								li База отдыха работает круглогодично
+								li На территории есть медицинский работник.
+						p Зеленая стоянка "Бухта радости" – это круглогодичная, хорошо охраняемая база отдыха, всего в 13 км от МКАД, расположенная на живописном берегу водохранилища. Вековые сосны, пьянящий чистый воздух и идеальные условия для полноценного отдыха!
+						p Здесь имеются различные площадки для занятий спортом и проведения соревнований. Если вы планируете провести банкет, фуршет, корпоратив, день рождения, юбилей или свадьбу на природе, то в вашем распоряжении стационарные беседки и легкие шатры вместимостью от 30 до 100 человек. Вы можете взять в аренду спортивный инвентарь, шезлонги, а также катамараны, лодки и катера.
+						.parkings__photos
+							- var x = 5;
+							- for (var i = 1; i <= x; i++) {
+								.parkings__photo
+									img(src="/assets/img/ship-photo.jpg", alt="")
+							- }
