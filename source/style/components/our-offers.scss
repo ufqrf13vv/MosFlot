@@ -17,6 +17,18 @@
 		padding: 20px 40px 17px 40px;
 
 		color: $white;
+
+		@include tablet {
+			padding: 5px;	
+		}
+
+		@include medium {
+			padding: 15px 10px;
+		}
+
+		@include desctop {
+			padding: 20px 40px 17px 40px;
+		}
 	}
 
 	& ul {
@@ -47,11 +59,25 @@
 	&__footer {
 		font-family: $roman;
 
-		padding: 18px 40px;
-
 		text-align: center;
 
-		border-top: 1px solid $grey-line
+		border-top: 1px solid $grey-line;
+
+		@include small_mobile {
+			padding: 18px 40px;
+		}
+
+		@include tablet {
+			padding: 10px;	
+		}
+
+		@include medium {
+			padding: 18px 10px;	
+		}
+
+		@include desctop {
+			padding: 18px 40px;	
+		}
 	}
 
 	&__title {

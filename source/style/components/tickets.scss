@@ -7,12 +7,14 @@
 	border: 2px solid $background;
 	border-radius: 8px;
 
+	margin-bottom: 30px;
+
 	&__description {
 		width: 35%;
 	}
 
 	&__buy {
-		max-width: 65%;
+		max-width: 60%;
 	}
 
 	&__title {

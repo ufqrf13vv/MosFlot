@@ -2,10 +2,27 @@
 	font-family: $roman;
 	font-size: 14px;
 
-	padding: 33px 30px 28px 30px;
 	margin-bottom: 30px;
 
 	background: $white;
+
+	@include small_mobile {
+		padding: 20px 40px;
+		
+		margin-top: 20px;
+	}
+
+	@include tablet {
+		padding: 15px;	
+	}
+
+	@include medium {
+		padding: 20px;	
+	}
+
+	@include desctop {
+		padding: 33px 30px 28px 30px;		
+	}
 
 	&__title {
 		font-family: $bold;
@@ -25,6 +42,14 @@
 		align-items: center;
 
 		margin-bottom: 22px;
+
+		@include tablet {
+			margin-bottom: 10px;	
+		}
+
+		@include medium {
+			margin-bottom: 22px;
+		}
 
 		&--start {
 			align-items: flex-start;
@@ -103,12 +128,26 @@
 
 		cursor: pointer;
 
-		&--tall {
-			font-size: 14px;
-			
+		&--tall {		
 			background: $orange;
 
 			padding: 18px 0;
+
+			@include tablet {
+				font-size: 13px;
+
+				padding: 10px 0;	
+			}
+
+			@include medium {
+				font-size: 13px;
+
+				padding: 18px 0;	
+			}
+
+			@include desctop {
+				font-size: 14px;	
+			}
 		}
 
 		&:hover {
@@ -118,6 +157,19 @@
 
 	&__radio {
 		display: none;
+
+		&-wrap {
+			display: flex;
+			flex-direction: row;
+
+			@include tablet {
+				flex-direction: column;	
+			}
+
+			@include medium {
+				flex-direction: row;	
+			}
+		}
 
 		&-label {
 			font-size: 14px;
@@ -144,8 +196,23 @@
 				top: 0;
 			}
 
-			&:not(:last-child) {
-				margin-right: 15px;
+			@include small_mobile {
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
+			}
+
+			@include tablet {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+
+			@include medium {
+				&:not(:last-child) {
+					margin-right: 15px;
+					margin-bottom: 0;
+				}	
 			}
 		}
 

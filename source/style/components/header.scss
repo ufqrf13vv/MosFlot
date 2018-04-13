@@ -9,6 +9,18 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include small_mobile {
+			flex-direction: column;
+		}
+
+		@include tablet {
+			flex-direction: column;	
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
 	}
 
 	&__contacts {

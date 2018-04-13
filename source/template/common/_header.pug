@@ -12,6 +12,8 @@ header.header
 					a.header__contacts-phone(href="#") 8 (495) 730-0860
 					.header__contacts-time 10:00 - 22:00
 		.main-menu
+			a.main-menu__burger(href="#", id="menu")
+				include ../../images/icon/bars.svg
 			ul.main-menu__list
 				li.main-menu__item.main-menu__item--blue
 					a.main-menu__link(href="#") Аренда теплохода
@@ -24,4 +26,4 @@ header.header
 				li.main-menu__item
 					a.main-menu__link(href="parkings.html") Причалы и стоянки
 				li.main-menu__item.main-menu__item--costing
-					a.main-menu__link(href="#") Рассчитать мероприятие
+					a.main-menu__link#modal-call(href="#") Рассчитать мероприятие

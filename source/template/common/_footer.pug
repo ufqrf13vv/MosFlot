@@ -70,3 +70,27 @@ footer.footer
 			a.footer__copyright-link(href="#") Создание сайта веб-студия waytostart
 
 	a.back-call(href="#")
+
+.modal__background#background
+.modal
+	.modal__wrapper
+		button.modal__close
+		.modal__header
+			.modal__main_title Бронирование теплохода
+			.modal__title Оставьте заявку и мы с Вами свяжемся
+		.modal__row
+			label.modal__label(for="") Ваше имя:
+			input.modal__input(type="text")
+		.modal__row
+			label.modal__label(for="") Телефон:
+			input.modal__input(type="text")
+		.modal__row
+			label.modal__label(for="") Email:
+			input.modal__input(type="text")
+		.modal__row
+			input.modal__checkbox(type="checkbox", id="check")
+			label.modal__checkbox-label(for="check") Даю согласие на обработку персональных данных
+		.modal__row.modal__row--center
+			input.modal__submit(type="submit", value="Расчитать мероприятие")
+
+

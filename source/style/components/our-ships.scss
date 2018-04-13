@@ -6,6 +6,20 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include small_mobile {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include tablet {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
 	}
 
 	&__block {
@@ -27,6 +41,22 @@
 		color: $blue-text;
 
 		padding-left: 70px;
+
+		@include small_mobile {
+			padding-left: 0;
+
+			margin-bottom: 20px;
+		}
+
+		@include tablet {
+			padding-left: 0;
+
+			margin-bottom: 20px;
+		}
+
+		@include medium {
+			padding-left: 70px;	
+		}
 
 		&::before {
 			content: url('../img/small-boat.png');

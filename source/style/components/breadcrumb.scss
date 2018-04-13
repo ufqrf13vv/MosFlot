@@ -3,12 +3,29 @@
 
 	list-style: none;
 
-	padding: 40px 0;
 	margin-top: 0;
-	margin-bottom: 15px;
 	
 	font-family: $roman;
 	font-size: 15px;
+
+	@include small_mobile {
+		padding: 10px 0;
+	}
+
+	@include tablet {
+		padding: 15px 0;
+		margin-bottom: 10px;	
+	}
+
+	@include medium {
+		padding: 20px 0;
+		margin-bottom: 10px;	
+	}
+
+	@include desctop {
+		padding: 40px 0;
+		margin-bottom: 15px;
+	}
 
 	&__item {
 		position: relative;

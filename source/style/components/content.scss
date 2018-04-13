@@ -5,6 +5,10 @@
 
 	background: $white;
 
+	@include small_mobile {
+		width: 100%;
+	}
+
 	&--empty {
 		padding: 0;
 	}

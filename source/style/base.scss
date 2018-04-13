@@ -57,6 +57,10 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+
+	@include small_mobile {
+		flex-direction: column;
+	}
 }
 
 .page ul {

@@ -8,16 +8,45 @@
 
 	&__wrapper {
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
 
 		margin-bottom: 55px;
+
+		justify-content: center;
+
+		@include desctop {
+			justify-content: space-between;
+		}
 	}
 
 	&__block {
 		display: flex;
 
+		margin-bottom: 30px;
+
+		@include desctop {
+			&:first-child {
+				margin-bottom: 0;
+			}	
+		}
+
 		&--column {
-			flex-direction: column;
+
+			@include small_mobile {
+				flex-direction: column;
+			}
+
+			@include tablet {
+				flex-direction: column;	
+			}
+
+			@include medium {
+				flex-direction: row;	
+			}
+
+			@include desctop {
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -185,10 +214,22 @@
 	&__copyright {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
 
 		font-size: 14px;
 
 		color: #5f93c5;
+
+		@include small_mobile {
+			justify-content: center;
+		}
+
+		&-item {
+			@include small_mobile {
+				margin-bottom: 15px;
+			}
+		}
 
 		&-link {
 			font-family: $gotham;

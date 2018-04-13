@@ -61,6 +61,10 @@
 	&__slide {
 		margin: 0 7px;
 
+		&--small {
+			margin: 0;
+		}
+
 		&-wrapper {
 			display: flex;
 		}
@@ -226,6 +230,18 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
+		@include tablet {
+			font-size: 14px;	
+		}
+
+		@include medium {
+			font-size: 16px;	
+		}
+
+		@include desctop {
+			font-size: 16px;	
+		}
 	}
 
 	&__row {
@@ -257,17 +273,22 @@
 }
 
 .item-slider {
-	width: 397px;
-
 	position: relative;
 
-	&__block {
-		float: left;
+	@include desctop {
+		width: 397px;	
+	}
 
-		margin-right: 30px;
+	&__block {
+		overflow: hidden;
+
 		margin-bottom: 20px;
 
-		overflow: hidden;
+		@include desctop {
+			float: left;
+
+			margin-right: 30px;	
+		}
 	}
 
 	&__main-image {

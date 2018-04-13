@@ -1,7 +1,10 @@
 (function () {
     $(document).ready(function () {
-        function menu(main, sibling) {
-            var menu = main.siblings(sibling);
+        //  Выпадающее меню
+        $('#menu').on('click', function (e) {
+            e.preventDefault();
+
+            var menu = $(this).siblings('.main-menu__list');
 
             if (menu.css('display') == 'none') {
                 menu.fadeIn();
@@ -10,7 +13,7 @@
             }
 
             menu.fadeOut();
-        }
+        });
 
         //  Main slider
         $('#main-slider').slick({
@@ -29,21 +32,69 @@
             arrows: true,
             centerPadding: '19.5%',
             centerMode: true,
-            autoplay: false
+            autoplay: true,
+            responsive: [{
+                breakpoint: 1500,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: false
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true
+                }
+            }, {
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true
+                }
+            }]
         });
         //  Item slider
-        $('.item-slider, #ships-slider').slick({
+        $('.item-slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
             autoplay: false
+        });
+        //  Ships-slider
+        $('#ships-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: false,
+            responsive: [{
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
         });
         //  Events slider
 		$('#events-slider').slick({
 			slidesToShow: 5,
             slidesToScroll: 1,
             arrows: true,
-            autoplay: false
+            autoplay: false,
+            responsive: [{
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
         });
 
         $('#trip-slider').slick({
@@ -69,6 +120,30 @@
             } else {
                 title.show();
             }
+        });
+
+        //  Open modal-window
+        $('#modal-call').on('click', function(event) {
+            event.preventDefault();
+
+            $('.modal').addClass('modal--active');
+            $('.modal__background').addClass('modal__background--active');
+        });
+
+        //  Close modal-window
+        $('.modal__close').on('click', function() {
+            $('.modal__background').removeClass('modal__background--active');
+            $('.modal').removeClass('modal--active');
+        });
+
+        $('#background').on('click', function() {
+            var background = $('#background'),
+                sibling = background.siblings('div[class$="--active"]'),
+                classes = sibling.attr('class'),
+                classArr = classes.split(' ');
+
+            sibling.removeClass(classArr[1]);
+            background.removeClass('modal__background--active');
         });
     });
 })();

@@ -1,6 +1,12 @@
 .aside {
 	width: 23%;
 
+	@include small_mobile {
+		width: 100%;
+
+		margin-bottom: 20px;
+	}
+
 	&__block {
 		background: $white;
 
@@ -47,6 +53,10 @@
 			padding: 16px 10px 16px 25px;
 
 			color: inherit;
+
+			@include small_mobile {
+				padding: 10px;
+			}
 		}
 
 		&-sublist {

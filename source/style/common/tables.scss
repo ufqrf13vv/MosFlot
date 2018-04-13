@@ -26,6 +26,18 @@
 
 	border-collapse: collapse;
 
+	@include small_mobile {
+		font-size: 14px;
+	}
+
+	@include tablet {
+		font-size: 14px;	
+	}
+
+	@include medium {
+		font-size: inherit;	
+	}
+
 	&:not(:last-child) {
 		margin-bottom: 30px;
 	}
@@ -70,6 +82,18 @@
 	font-family: $roman;
 
 	border-collapse: collapse;
+
+	@include small_mobile {
+		width: 100%;
+	}
+
+	@include tablet {
+		width: 100%;	
+	}
+
+	@include medium {
+		width: 80%;	
+	}
 
 	& tr:not(:last-child) {
 		border-bottom: 1px solid #dce5ee;

@@ -3,6 +3,10 @@
 
 	background: $white;
 
+	@include small_mobile {
+		width: 100%;
+	}
+
 	&__wrapper {
 		margin-bottom: 40px;
 
@@ -80,7 +84,7 @@
 		margin-right: 27px;
 		padding-right: 27px;
 
-		border-right: 1px solid $white;
+		border-right: 1px solid $background;
 	}
 
 	&__number {
@@ -197,14 +201,32 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
+
+		@include desctop {
+			flex-direction: row;	
+		}
 
 		&-block {
-			width: 55%;
+			
+			@include medium {
+				width: auto;	
+			}
+
+			@include desctop {
+				width: 55%;	
+			}
 		}
 	}
 
 	&__map {
-		width: 42%;
+		height: 200px;
+		width: auto;
+
+		@include desctop {
+			height: auto;
+			width: 42%;	
+		}
 
 		background: url('../img/contacts-map.png') no-repeat 0 0;
 	}
@@ -227,10 +249,28 @@
 		justify-content: space-between;
 
 		&-item {
-			width: 234px;
-			height: 156px;
-
 			position: relative;
+
+			@include small_mobile {
+				width: 32%;
+			}
+
+			@include tablet {
+				width: 30%;	
+			}
+
+			@include medium {
+				width: 30%;	
+			}
+
+			@include desctop {
+				height: 156px;
+				width: 30%;	
+			}
+
+			& > img {
+				width: 100%;
+			}
 
 			&:hover::after {
 				content: '';

@@ -25,6 +25,18 @@
 		text-align: left;
 
 		margin-bottom: 54px;
+
+		@include small_mobile {
+			margin-bottom: 15px;
+		}
+
+		@include tablet {
+			margin-bottom: 25px;	
+		}
+
+		@include medium {
+			margin-bottom: 54px;
+		}
 	}
 }
 

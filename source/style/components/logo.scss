@@ -4,6 +4,18 @@
 
 	text-decoration: none;
 
+	@include small_mobile {
+		margin-bottom: 25px;
+	}
+
+	@include tablet {
+		margin-bottom: 25px;	
+	}
+
+	@include medium {
+		margin-bottom: 0;	
+	}
+
 	& > img {
 		margin-right: 45px;
 	}

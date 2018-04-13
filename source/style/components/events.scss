@@ -16,7 +16,6 @@
 	}
 
 	&__main-image {
-		height: 452px;
 		width: 100%;
 
 		margin-bottom: 20px;
@@ -56,9 +55,13 @@
 		}
 
 		& .slick-next {
-			right: 36px;
+			right: 39px;
 
 			background-position: -35px 0;
+
+			@include desctop {
+				right: 36px;	
+			}
 		}
 	}
 
