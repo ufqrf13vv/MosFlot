@@ -11,6 +11,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		&--column {
+			flex-direction: column;
+		}
 	}
 
 	&__add {
@@ -20,6 +24,13 @@
 		align-items: center;
 
 		width: 35%;
+
+		&--row {
+			flex-direction: row;
+			align-items: center;
+
+			width: 100%;
+		}
 	}
 
 	&__title-wrapper {
@@ -33,6 +44,14 @@
 		text-align: center;
 
 		margin-bottom: 22px;
+
+		&--left {
+			width: 45%;
+
+			text-align: left;
+
+			margin-bottom: 0;
+		}
 	}
 
 	&__new {
@@ -48,6 +67,13 @@
 		color: $white;
 
 		text-decoration: none;
+
+		&--small {
+			padding-top: 6px;
+			padding-bottom: 6px;
+
+			background: $orange-text;
+		}
 
 		&:hover {
 			opacity: .7;

@@ -20,7 +20,7 @@
             dots: true,
             centerPadding: '19.5%',
             centerMode: true,
-            autoplay: false
+            autoplay: true
         });
         //  Small slider
         $('.main-slider--small').slick({
@@ -31,8 +31,8 @@
             centerMode: true,
             autoplay: false
         });
-        //  News slider
-        $('.news-item__slider').slick({
+        //  Item slider
+        $('.item-slider, #ships-slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
@@ -46,11 +46,12 @@
             autoplay: false
         });
 
-        $('#ships-slider').slick({
-            slidesToShow: 3,
+        $('#trip-slider').slick({
+            slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: true,
-            autoplay: false
+            arrows: false,
+            dots: true,
+            autoplay: true
         });
 
         $('.faq__btn').on('click', function() {

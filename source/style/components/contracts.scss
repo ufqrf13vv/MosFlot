@@ -1,44 +1,4 @@
 .contracts {
 	font-family: $roman;
 	line-height: 22px;
-
-	&__table {
-		width: 100%;
-
-		border-collapse: collapse;
-
-		&:not(:last-child) {
-			margin-bottom: 30px;
-		}
-
-		& tr:not(:last-child) {
-			border-bottom: 1px solid #dce5ee;
-		}
-
-		& td {
-			padding: 5px 0;
-
-			&:nth-child(2) {
-				text-align: right;
-			}
-		}
-
-		&--tr tr {
-			border-bottom: none;
-
-			& td:nth-child(2) {
-				width: 40%;
-
-				text-align: left;
-			}
-		}
-
-		& a {
-			color: $blue-text;
-
-			&:hover {
-				opacity: .7;
-			}
-		}
-	}
 }

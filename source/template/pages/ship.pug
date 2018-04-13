@@ -1,0 +1,206 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Наши теплоходы', 'Теплоход Вдохновение'])
+
+			h2.main-title.main-title--left Теплоход Вдохновение
+			.wrapper
+				section.content.page.content--empty.content--lh
+					.parkings__header
+						.parkings__header-block
+							a.parkings__header-link(href="") 3D тур по теплоходу
+						.parkings__header-block
+							a.parkings__header-link(href="") Интерьер
+						.parkings__header-block
+							a.parkings__header-link(href="") Оборудование
+					.parkings__content.parkings__content--border
+						.parkings__wrapper
+							.parkings__block
+								.item-slider__block
+									.item-slider__main-image
+										img(src="/assets/img/boat-slide.png", alt="")
+									.item-slider
+										.item-slider__slide
+											img(src="/assets/img/boat-slide.png", alt="")
+										.item-slider__slide
+											img(src="/assets/img/boat-slide.png", alt="")
+										.item-slider__slide
+											img(src="/assets/img/boat-slide.png", alt="")
+										.item-slider__slide
+											img(src="/assets/img/boat-slide.png", alt="")
+							.parkings__block
+								table.small-table
+									tr
+										td Банкет (человек):
+										td 30
+									tr
+										td Фуршет (человек):
+										td 40
+									tr
+										td Москва / Подмосковье: 
+										td Да/перегон
+									tr
+										td Перегон (шлюзование):
+										td 1 час аренды
+								table.small-table
+									tr
+										th Питание:
+										th
+									tr
+										td Банкет (человек):
+										td от 2 500 руб.
+									tr
+										td Банкет (человек):
+										td от 2 500 руб.
+									tr
+										td Банкет (человек):
+										td от 2 500 руб.
+									tr
+										td Банкет (человек):
+										td от 2 500 руб.
+								table.small-table
+									tr
+										th Меню:
+										th
+									tr
+										td Банкетное 
+											a(href="") Скачать
+										td
+									tr
+										td Фуршетное 
+											a(href="") Скачать
+										td
+								table.small-table
+									tr
+										th Стоимость аренды:
+										th
+									tr
+										td Понедельник
+										td 4 500 руб/час
+									tr
+										td Вторник
+										td 4 500 руб/час
+									tr
+										td Среда
+										td 4 500 руб/час
+									tr
+										td Четверг
+										td 4 500 руб/час
+					.parkings__content.parkings__content--border.parkings__content--center
+						p Теплоход "Вдохновение" или, как ласково его называют "Вдох", никого не оставит равнодушным. Он скорее похож на небольшую элегантную яхту с великолепным интерьером.
+						p Двухпалубное судно отлично подойдет, чтобы отпраздновать день рождения, свадьбу или юбилей на теплоходе
+					.parkings__content.parkings__content--border
+						h3.title-grey Прогулки на этом теплоходе
+						.ships-list__slider-wrap
+							.ships-list#ships-slider
+								- var x = 5;
+								- for (var i = 1; i <= x; i++) {
+									.ships-list__item.ships-list__item--slider
+										.ships-list__item-photo
+											img(src="/assets/img/ship-photo.jpg", alt="")
+										.ships-list__item-desc
+											.ships-list__item-block.ships-list__item-block--header
+												.ships-list__item-title.ships-list__item-title--main Теплоход вдохновение
+											.ships-list__item-block
+												.ships-list__item-title.ships-list__item-title--small Билет с ужином:
+												.ships-list__item-price.ships-list__item-price--small 990 руб.
+											.ships-list__item-block
+												.ships-list__item-title.ships-list__item-title--small Билет без ужина:
+												.ships-list__item-price.ships-list__item-price--small 990 руб.
+											.ships-list__item-block
+												.ships-list__item-title.ships-list__item-title--small Детский с ужином:
+												.ships-list__item-row.ships-list__item-row--sa
+													.ships-list__item-price.ships-list__item-price--small 990 руб.
+													.ships-list__item-oldprice 660 руб.
+												.ships-list__item-row.ships-list__item-row--center
+													a.ships-list__item-more(href="#") Подробнее
+								- }
+						h3.title-grey Интерьер и планировка теплохода
+						ul
+							p
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
+							p
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
+							p
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
+							p
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
+							p
+								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
+					.parkings__content.parkings__content--border
+						h3.title-grey Оборудование теплохода
+						.service__wrapper
+							.service__block.service__block--big
+								.service__image.service__image--big
+									img(src="/assets/img/icon/karaoke.png", alt="")
+								.service__desc ТВ, караоке
+							.service__block.service__block--big
+								.service__image.service__image--big
+									img(src="/assets/img/icon/conditioner.png", alt="")
+								.service__desc Климат-контроль
+							.service__block.service__block--big
+								.service__image.service__image--big
+									img(src="/assets/img/icon/restaurant.png", alt="")
+								.service__desc Камбуз
+					.parkings__content.parkings__content--border
+						h3.title-grey Обслуживание
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam reiciendis atque, nobis at. Soluta saepe, eius laborum accusantium quisquam impedit quasi excepturi eveniet perferendis sequi nam ratione nostrum consequuntur reprehenderit.
+					.parkings__content.parkings__content--border
+						h3.title-grey Тех. характеристики
+						table.separate-bold-table.parkings__table
+							tr
+								td Вместимость
+								td до 50 гостей
+							tr
+								td Вместимость
+								td до 50 гостей
+							tr
+								td Вместимость
+								td до 50 гостей
+							tr
+								td Вместимость
+								td до 50 гостей
+							tr
+								td Вместимость
+								td до 50 гостей
+					.parkings__content.parkings__content--border
+						h3.title-grey Похожие теплоходы
+						.ships-list.ships-list--content
+							- var x = 2;
+							- for (var i = 0; i <= x; i++) {
+								.ships-list__item
+									.ships-list__item-photo
+										img(src="/assets/img/ship-photo.jpg", alt="")
+									.ships-list__item-desc
+										.ships-list__item-block
+											.ships-list__item-title.ships-list__item-title--main Теплоход вдохновение
+										.ships-list__item-block
+											.ships-list__item-title Вместимость:
+											.ships-list__item-row
+												span Банкет:
+												span до 30 чел
+											.ships-list__item-row
+												span Фуршет:
+												span до 60 чел
+										.ships-list__item-block
+											.ships-list__item-title Аренда:
+											.ships-list__item-row от 4 500 руб/час
+											.ships-list__item-row.ships-list__item-row--end
+												a.ships-list__item-more(href="#") Подробнее
+							- }
+
+				aside.aside
+					.order-form
+						.order-form__title Забронировать теплоход
+						.order-form__row
+							label.order-form__label(for="") Ваше имя:
+							input.order-form__input(type="text")
+						.order-form__row
+							label.order-form__label(for="") Ваш телефон:
+							input.order-form__input.order-form__input--phone(type="text")
+						.order-form__row
+							label.order-form__label(for="") Планируемая дата:
+							input.order-form__input.order-form__input--date(type="text")
+						input.order-form__submit(type="submit", value="Заказать")

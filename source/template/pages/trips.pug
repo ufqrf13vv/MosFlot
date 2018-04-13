@@ -1,0 +1,86 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Прогулки на теплоходе'])
+
+			h2.main-title.main-title--left Прогулки
+			.wrapper
+				aside.aside
+					.aside__block
+						.aside__title Прогулки на теплоходе
+						ul.aside__menu
+							li.aside__menu-item.aside__menu-item--active
+								a.aside__menu-link(href="#") Последний звонок + выпускной
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Последний звонок + выпускной
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Последний звонок + выпускной
+							li.aside__menu-item
+								a.aside__menu-link(href="#") Последний звонок + выпускной
+				section.content.trips
+					.main-slider.main-slider--empty#trip-slider
+						.main-slider__slide.main-slider__slide--width
+							img(src="/assets/img/main-slide.jpg", alt="")
+						.main-slider__slide.main-slider__slide--width
+							img(src="/assets/img/main-slide.jpg", alt="")
+						.main-slider__slide.main-slider__slide--width
+							img(src="/assets/img/main-slide.jpg", alt="")
+						.main-slider__slide.main-slider__slide--width
+							img(src="/assets/img/main-slide.jpg", alt="")
+					.filter
+						.filter__row
+							label.order-form__label.order-form__label--small(for="") Выберите дату прогулки:
+							input.order-form__input.order-form__input--date.order-form__input--small(type="text", placeholder="13.08.2018")
+						.filter__condition
+							input.filter__radio(type="radio", name="condition", id="all")
+							label.filter__radio-label(for="all") Все прогулки
+							input.filter__radio(type="radio", name="condition", id="cond-1")
+							label.filter__radio-label(for="cond-1") Прогулки сегодня
+							input.filter__radio(type="radio", name="condition", id="cond-2")
+							label.filter__radio-label(for="cond-2") Салют 9 мая!
+							input.filter__radio(type="radio", name="condition", id="cond-3", checked="checked")
+							label.filter__radio-label(for="cond-3") Свидание на теплоходе
+							input.filter__radio(type="radio", name="condition", id="cond-4")
+							label.filter__radio-label(for="cond-4") С дискотекой
+							input.filter__radio(type="radio", name="condition", id="cond-5")
+							label.filter__radio-label(for="cond-5") Для детей
+							input.filter__radio(type="radio", name="condition", id="cond-6")
+							label.filter__radio-label(for="cond-6") Центр
+							input.filter__radio(type="radio", name="condition", id="cond-7")
+							label.filter__radio-label(for="cond-7") Киевский вокзал
+							input.filter__radio(type="radio", name="condition", id="cond-8")
+							label.filter__radio-label(for="cond-8") Речной вокзал
+							input.filter__radio(type="radio", name="condition", id="cond-9")
+							label.filter__radio-label(for="cond-9") Нагатино, Печатники и Коломенское
+
+					.parkings__item-list
+						- var x = 3;
+						- for (var i = 0; i <= x; i++) {
+							.parkings__item
+								h3.title-black Прогулки 8 марта
+								.parkings__wrapper
+									.parkings__block
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus voluptates est quo omnis explicabo nobis, corporis impedit recusandae architecto odio sit a illum. Harum quia similique deserunt dicta!
+										.parkings__block-image
+											img(src="/assets/img/boat-slide.png", alt="")
+									.parkings__block.parkings__block--col
+										.parkings__price-block
+											.parkings__price-line
+												.parkings__price-title Билет с ужином:
+												.parkings__price 990 руб.
+											.parkings__price-line
+												.parkings__price-title Билет с ужином:
+												.parkings__price 990 руб.
+											.parkings__price-line
+												.parkings__price-title Билет с ужином:
+												.parkings__price 990 руб.
+										.parkings__description
+											p <b>Время:</b> Каждый будний день в 18:00, в выходные: в 14:00 и  17:00
+											p <b>Причалы(ы):</b> м. Выставочная, Москва-Сити, Причал "Международная выставка"
+											p <b>Продолжительность:</b> 3 ч 50 мин
+										.parkings__button-wrapper
+											a.parkings__button(href="parking.html") Подробнее
+											a.parkings__button.parkings__button--inverse(href="") Купить
+						- }

@@ -1,0 +1,77 @@
+.tickets {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 24px;
+
+	border: 2px solid $background;
+	border-radius: 8px;
+
+	&__description {
+		width: 35%;
+	}
+
+	&__buy {
+		max-width: 65%;
+	}
+
+	&__title {
+		font-family: $bold;
+
+		margin-bottom: 20px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		font-family: $roman;
+
+		padding: 3px 0;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $background;
+		}
+
+		&-buy {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__sign {
+		font-family: $medium;
+		font-size: 15px;
+
+		text-transform: uppercase;
+
+		margin-right: 25px;
+	}
+
+	&__time {
+		font-family: $roman;
+
+		padding: 4px 20px;
+
+		border: 1px solid $orange-text;
+		border-radius: 8px;
+
+		cursor: pointer;
+
+		&:hover,
+		&--active {
+			background: $orange-text;
+
+			color: $white;
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}

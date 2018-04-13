@@ -5,6 +5,14 @@
 
 	margin-bottom: 50px;
 
+	&--start {
+		justify-content: flex-start;
+	}
+
+	&--mb {
+		margin-bottom: 25px;
+	}
+
 	&__stars {
 		display: flex;
 
@@ -48,6 +56,10 @@
 
 			background: url('../img/icon/mini-stars.png') no-repeat -21px 0;
 		}
+
+		&::before {
+			display: none;
+		}
 	}
 
 	&__count {
@@ -63,9 +75,19 @@
 		padding-left: 0;
 		margin: 0;
 
+		&--mb {
+			margin-bottom: 30px;
+		}
+
 		&-item {
 			display: flex;
 			align-items: center;
+
+			line-height: 20px;
+
+			&::before {
+				display: none;
+			}
 		}
 
 		&-val {

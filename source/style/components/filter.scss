@@ -1,0 +1,47 @@
+.filter {
+	background: $white;
+
+	padding: 24px 7px 17px 7px;
+
+	margin-bottom: 27px;
+
+	&__condition {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin-bottom: 24px;
+	}
+
+	&__radio {
+		display: none;
+
+		&-label {
+			font-family: $roman;
+			font-size: 14px;
+
+			color: #2abcf1;
+
+			padding: 5px 8px;
+
+			border: 1px solid #2abcf1;
+			border-radius: 30px;
+
+			margin-bottom: 7px;
+			margin-right: 7px;
+
+			cursor: pointer;
+		}
+
+		&:checked + &-label {
+			border-color: $orange-text;
+			color: $orange-text;
+		}
+	}
+}

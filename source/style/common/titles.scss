@@ -37,6 +37,10 @@
 	&--blue {
 		color: $dark-blue;
 	}
+
+	&--smaller {
+		font-size: 18px;
+	}
 }
 
 .title-grey {
@@ -45,5 +49,17 @@
 
 	text-align: center;
 
+	margin-top: 0;
+
 	color: #b6c1cb;
+}
+
+.title-black {
+	font-family: $bold;
+	font-size: 24px;
+
+	color: inherit;
+
+	margin-top: 0;
+	margin-bottom: 25px;
 }

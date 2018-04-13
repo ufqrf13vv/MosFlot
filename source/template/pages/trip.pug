@@ -1,0 +1,203 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Прогулки', 'Прогулка'])
+
+			h2.main-title.main-title--left Прогулка
+			.wrapper
+				section.content.page.parkings.parkings--pad
+					.parkings__header
+						.parkings__header-block
+							a.parkings__header-link(href="") Расписание
+						.parkings__header-block
+							a.parkings__header-link(href="") Причал(ы)
+						.parkings__header-block
+							a.parkings__header-link(href="") Продолжительность
+						.parkings__header-block
+							a.parkings__header-link(href="") Теплоходы
+					.parkings__content.parkings__content--border
+						.item-slider__block
+							.item-slider__main-image
+								img(src="/assets/img/news-item.png", alt="")
+							.item-slider
+								.item-slider__slide
+									img(src="/assets/img/news-item.png", alt="")
+								.item-slider__slide
+									img(src="/assets/img/news-item.png", alt="")
+								.item-slider__slide
+									img(src="/assets/img/news-item.png", alt="")
+								.item-slider__slide
+									img(src="/assets/img/news-item.png", alt="")
+						h3.title-black Прогулка
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sit officia molestiae ab maxime eligendi explicabo dolores dignissimos accusantium quibusdam sapiente, voluptatem ducimus nostrum tempore consectetur, esse vero atque velit!
+						.service__wrapper
+							.service__block
+								.service__image
+									img(src="/assets/img/icon/bicycle.png", alt="")
+								.service__desc Можно с велосипедом
+							.service__block
+								.service__image
+									img(src="/assets/img/icon/champagne.png", alt="")
+								.service__desc Можно с алкоголем
+							.service__block
+								.service__image
+									img(src="/assets/img/icon/wi-fi.png", alt="")
+								.service__desc Wi-Fi
+							.service__block
+								.service__image
+									img(src="/assets/img/icon/karaoke.png", alt="")
+								.service__desc Живая музыка
+							.service__block
+								.service__image
+									img(src="/assets/img/icon/cafe.png", alt="")
+								.service__desc Отдельные столики
+							.service__block
+								.service__image
+									img(src="/assets/img/icon/towel.png", alt="")
+								.service__desc Пледы
+						p Приглашаем на оригинальные зимние речные прогулки по центру Москвы на комфортабельных белоснежных теплоходах! Во время круиза по Москве-реке вам будет предложен замечательный ужин, а приятную атмосферу на борту дополнит живая музыка и потрясающие виды набережных столицы в вечерней иллюминации, а также главных достопримечательностей города, которые вы сможете увидеть с необычного ракурса.
+						p Приглашаем на оригинальные зимние речные прогулки по центру Москвы на комфортабельных белоснежных теплоходах! Во время круиза по Москве-реке вам будет предложен замечательный ужин, а приятную атмосферу на борту дополнит живая музыка и потрясающие виды набережных столицы в вечерней иллюминации, а также главных достопримечательностей города, которые вы сможете увидеть с необычного ракурса.
+						p Приглашаем на оригинальные зимние речные прогулки по центру Москвы на комфортабельных белоснежных теплоходах!
+					.parkings__content.parkings__content--border
+						h3.title-grey Маршрут прогулки
+						p.parkings__route Причал «Набережная Тараса Шевченко» — Дом правительства — Мэрия Москвы — площадь Европы (Киевский вокзал) — Новодевичий монастырь — МГУ им. М.В. Ломоносова — Стадион «Лужники» — Воробьевы горы — Нескучный Сад — Центральный парк культуры и отдыха им. А М. Горького — Крымский мост — Храм Христа Спасителя — Московский Кремль — Собор Василия Блаженного — Ландшафтный парк «Зарядье» — Парящий мост (оборот) — Причал «Набережная Тараса Шевченко»
+						.parkings__map
+						.tickets
+							.tickets__description
+								.tickets__title Билеты:
+								.tickets__row
+									span Билет с ужином
+									span 990 руб.
+								.tickets__row
+									span Билет с ужином
+									span 990 руб.
+								.tickets__row
+									span Билет с ужином
+									span 990 руб.
+							.tickets__buy
+								.tickets__title Купить:
+								.tickets__row-buy
+									.tickets__sign пт
+									.tickets__time(data-name="fri17:00") 17:00
+									.tickets__time(data-name="fri20:00") 20:00
+								.tickets__row-buy
+									.tickets__sign сб
+									.tickets__time.tickets__time--active(data-name="sat17:00") 17:00
+									.tickets__time(data-name="sat20:00") 20:00
+									.tickets__time(data-name="sat22:00") 22:00
+								.tickets__row-buy
+									.tickets__sign вс
+									.tickets__time(data-name="sun17:00") 17:00
+									.tickets__time(data-name="sun20:00") 20:00
+									.tickets__time(data-name="sun22:00") 22:00
+									.tickets__time(data-name="sun23:00") 23:00
+
+						h3.title-grey Видео маршрут прогулки
+						.parkings__video
+
+						h3.title-grey Как добраться
+						.parkings__map
+						.service__wrapper.service__wrapper--sb.service__wrapper--mb
+							.service__section
+								h3.h3.h3--smaller Условия поездки:
+								ul
+									li Предложение действует для групп от 25 чел.
+									li Билеты необходимо распечатать и предъявить на входе.
+									li Билет действителен на одну поездку.
+									li Билет действителен на одну поездку.
+							.service__section
+								h3.h3.h3--smaller Меню:
+								ul
+									li Приветственный стол на верхней палубе
+									li Холодные закуски
+									li Салаты
+									li Горячие закуски
+									li Горячие закуски
+									li Горячие закуски
+									li Горячие закуски
+
+						h3.h3.h3--smaller Причал "Воробьевы горы"
+						.parkings__wrapper
+							.parkings__block
+								.parkings__small-map
+							.parkings__block
+								.rating.rating--start.rating--mb
+									ul.rating__stars
+										li.rating__star
+										li.rating__star
+										li.rating__star
+										li.rating__star
+										li.rating__star.rating__star--empty
+									.rating__count 4.5 из 5
+								.feedbacks__wrapper.feedbacks__wrapper--column
+									ul.rating__feedbacks.rating__feedbacks--mb
+										li.rating__feedbacks-item
+											.rating__feedbacks-val 5
+											.rating__feedbacks-scale
+												span
+											.rating__feedbacks-count 34 отзыва
+										li.rating__feedbacks-item
+											.rating__feedbacks-val 4
+											.rating__feedbacks-scale
+												span
+											.rating__feedbacks-count 14 отзывов
+										li.rating__feedbacks-item
+											.rating__feedbacks-val 3
+											.rating__feedbacks-scale
+												span
+											.rating__feedbacks-count 9 отзыва
+										li.rating__feedbacks-item
+											.rating__feedbacks-val 2
+											.rating__feedbacks-scale
+												span
+											.rating__feedbacks-count 5 отзыва
+										li.rating__feedbacks-item
+											.rating__feedbacks-val.rating__feedbacks-val--empty 1
+											.rating__feedbacks-scale
+												span
+											.rating__feedbacks-count 2 отзыва
+									.feedbacks__add.feedbacks__add--row
+										.feedbacks__sign.feedbacks__sign--left Если вы уже покупали билет на эту прогулку, то сможете оставить отзыв
+										a.feedbacks__new.feedbacks__new--small(href="") Оставить отзыв
+
+					.parkings__content
+						.feedbacks__list-header
+							.title-grey Отзывы
+							.sort
+								.sort__title Сортировка:
+								select.sort__select
+									option(value="date") По дате
+									option(value="rating") По рейтингу
+						- var x = 3;
+							- for (var i = 0; i <= x; i++) {
+								.feedbacks__list-item
+									.feedbacks__list-data
+										ul.rating__stars.rating__stars--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--mini
+											li.rating__star.rating__star--miniempty
+										.feedbacks__list-name Иван Иванов
+										.feedbacks__list-date 13.05.2017
+									.feedbacks__list-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora eligendi saepe omnis, perferendis unde dolores, neque commodi explicabo inventore quae recusandae eos rerum itaque eaque nihil amet accusantium earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus vel enim, magni dolorem, beatae nobis minus illo in, soluta veniam quibusdam doloremque saepe molestiae necessitatibus. Doloribus laboriosam, vero necessitatibus et.
+							- }
+				
+				aside.aside
+					.order-form
+						.order-form__line
+							.order-form__title Стоимость билетов
+							.order-form__small-title Билет с ужином:
+							.order-form__price 990 руб.
+						.order-form__line
+							.order-form__small-title Билет с ужином:
+							.order-form__price 990 руб.
+						.order-form__line
+							.order-form__small-title Билет с ужином:
+							.order-form__price_row
+								.order-form__price 990 руб.
+								.order-form__oldprice 660 руб.
+						input.order-form__submit(type="submit", value="Купить")
+
