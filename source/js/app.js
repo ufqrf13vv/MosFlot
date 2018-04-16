@@ -21,9 +21,30 @@
             slidesToScroll: 1,
             arrows: true,
             dots: true,
-            centerPadding: '19.5%',
+            centerPadding: '15%',
             centerMode: true,
-            autoplay: true
+            autoplay: true,
+            responsive: [{
+                breakpoint: 1600,
+                settings: {
+                    centerPadding: '10%'
+                }
+            }, {
+                breakpoint: 1400,
+                settings: {
+                    centerPadding: '5%'
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    centerPadding: '3%'
+                }
+            }, {
+                breakpoint: 960,
+                settings: {
+                    centerMode: false
+                }
+            }]
         });
         //  Small slider
         $('.main-slider--small').slick({
@@ -49,7 +70,14 @@
                 breakpoint: 960,
                 settings: {
                     slidesToShow: 1,
-                    centerMode: true
+                    centerMode: true,
+                    centerPadding: '5%'
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false
                 }
             }]
         });

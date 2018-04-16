@@ -26,6 +26,10 @@
 
 		position: relative;
 
+		@include small {
+			flex-direction: column;
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 37px;
 		}

@@ -17,16 +17,28 @@
 		flex-direction: column;
 		align-items: center;
 
-		@include small_mobile {
+		@include small {
+			width: 50%;
+
+			margin-bottom: 30px;
+		}
+
+		@include mobile {
 			width: 30%;
+
+			margin-bottom: 30px;
 		}
 
 		@include tablet {
-			width: 30%;	
+			width: 30%;
+
+			margin-bottom: 30px;
 		}
 
 		@include medium {
-			width: 15%;	
+			width: 15%;
+
+			margin-bottom: 0;
 		}
 
 		@include desctop {

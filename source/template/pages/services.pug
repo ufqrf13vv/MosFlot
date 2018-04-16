@@ -1,0 +1,82 @@
+extends ../_template
+
+block content
+	.main-content
+		.container
+			+breadcrumbs(['Главная', 'Услуги', 'Украшение теплохода'])
+
+			h2.main-title.main-title--left Украшение теплохода
+			.wrapper
+				section.content.events.page
+					.events__header
+						h5.events__title СК "Мосфлот" – компания судовладелец, поэтому мы можем гарантировать лучшие цены на аренду кораблей на свадьбу в Москве.
+					.events__main-image
+						img(src="/assets/img/wedding.jpg", alt="")
+					.events__slider#events-slider
+						- var x = 6;
+							- for (var i = 0; i <= x; i++) {
+								.events__slide
+									img(src="/assets/img/wedding.jpg", alt="")
+							- }
+					.events__description
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempora debitis, sed illo officiis sunt adipisci ullam tempore cumque voluptatem nobis natus impedit eaque fuga sit recusandae magnam. Ipsum, obcaecati.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem laudantium necessitatibus voluptate nisi ullam modi facere porro, ipsam nobis dolorum placeat pariatur fugit earum ex, esse mollitia. Delectus, numquam aspernatur!
+					.events__description
+						h3.title-grey Заголовок
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora delectus, temporibus ad blanditiis. Obcaecati, illum. Error veniam ducimus commodi eius sint unde voluptate totam, similique, voluptatum neque, doloribus rem quas.
+						ul
+							li Lorem ipsum dolor sit amet
+							li Lorem ipsum dolor sit amet
+							li Lorem ipsum dolor sit amet
+							li Lorem ipsum dolor sit amet
+							li Lorem ipsum dolor sit amet
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus aliquid sapiente eveniet aperiam odio quia libero sint minus commodi id nam dolores, soluta qui modi velit suscipit adipisci ex reiciendis.
+						.service__wrapper.service__wrapper--sb.service__wrapper--mb
+							.service__section.service__section--wight
+								h3.h3.h3--smaller Меню:
+								ul
+									li.service__section-row
+										.service__section-text Декорирование воздушными шарами (гирлянды, арки, тумбы и фонтаны)
+										.service__section-price от 8 000
+									li.service__section-row
+										.service__section-text Флористическое оформление (композиции на столы гостей, композиции из живых цветов при входе, на сцену)
+										.service__section-price от 1 500
+									li.service__section-row
+										.service__section-text Пресс волл (для заднего фона сцены с логотипом компании и датой)
+										.service__section-price от 12 000
+									li.service__section-row
+										.service__section-text Баннерная перетяжка на каждый борт теплохода с логотипом компании
+										.service__section-price от 14 000<br>(7 000 / шт.)
+							.service__section.service__section--narrow
+								h3.h3.h3--smaller Условия поездки:
+								p Существует множество вариантов декорирования:
+								ul
+									li ткани;
+									li воздушные шары;
+									li гирлянлы;
+									li скульптуры;
+									li цветы.
+						h3.title-grey Популярные теплоходы
+						.ships-list.ships-list--content
+							- var x = 2;
+							- for (var i = 0; i <= x; i++) {
+								.ships-list__item
+									.ships-list__item-photo
+										img(src="/assets/img/ship-photo.jpg", alt="")
+									.ships-list__item-desc
+										.ships-list__item-block
+											.ships-list__item-title.ships-list__item-title--main Теплоход вдохновение
+										.ships-list__item-block
+											.ships-list__item-title Вместимость:
+											.ships-list__item-row
+												span Банкет:
+												span до 30 чел
+											.ships-list__item-row
+												span Фуршет:
+												span до 60 чел
+										.ships-list__item-block
+											.ships-list__item-title Аренда:
+											.ships-list__item-row от 4 500 руб/час
+											.ships-list__item-row.ships-list__item-row--end
+												a.ships-list__item-more(href="#") Подробнее
+							- }

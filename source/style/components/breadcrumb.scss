@@ -8,8 +8,12 @@
 	font-family: $roman;
 	font-size: 15px;
 
+	@include small {
+		flex-direction: column;
+	}
+
 	@include small_mobile {
-		padding: 10px 0;
+		padding: 10px;
 	}
 
 	@include tablet {
@@ -39,6 +43,15 @@
 			padding-right: 20px;
 
 			border-right: 1px solid #3e4042;
+
+			@include small {
+				margin-right: 0;
+				padding-right: 0;
+
+				border-right: none;
+
+				margin-bottom: 10px;
+			}
 		}
 	}
 

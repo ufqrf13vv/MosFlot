@@ -9,6 +9,10 @@
 		justify-content: space-between;
 
 		padding-top: 40px;
+
+		@include small {
+			flex-direction: column;
+		}
 	}
 
 	&__block {
@@ -20,12 +24,30 @@
 
 		position: relative;
 
+		@include small {
+			width: 100%;
+		}
+
+		@include mobile {
+			width: 27%;
+		}
+
+		&:not(:last-child) {
+			@include small {
+				margin-bottom: 20px;
+			}
+		}
+
 		&:not(:last-child)::after {
 			content: url('../img/arrow.png');
 
 			position: absolute;
 			top: 20%;
 			right: -20%;
+
+			@include small {
+				display: none;
+			}
 		}
 
 		&-image {

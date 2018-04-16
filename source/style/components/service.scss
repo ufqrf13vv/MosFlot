@@ -53,5 +53,89 @@
 		border-radius: 8px;
 
 		font-size: 15px;
+
+		@include small_mobile {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		@include tablet {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		@include medium {
+			width: 48%;
+
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+
+		&--wight {
+			width: 59%;
+
+			font-family: $roman;
+
+			@include small_mobile {
+				width: 100%;
+			}
+
+			@include tablet {
+				width: 100%;	
+			}
+
+			@include medium {
+				width: 59%;	
+			}
+		}
+
+		&--narrow {
+			width: 40%;
+
+			font-family: $roman;
+
+			@include small_mobile {
+				width: 100%;
+			}
+
+			@include tablet {
+				width: 100%;	
+			}
+
+			@include medium {
+				width: 40%;	
+			}
+		}
+
+		&-row {
+			display: flex;
+			justify-content: space-between;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&-text {
+			width: 70%;
+		}
+
+		&-price {
+			width: 30%;
+
+			text-align: right;
+
+			font-family: $bold;
+			font-size: 16px;
+			
+			color: $light-blue;
+		}
 	}
 }

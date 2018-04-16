@@ -4,6 +4,11 @@
 
 	text-decoration: none;
 
+	@include small {
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	@include small_mobile {
 		margin-bottom: 25px;
 	}
@@ -18,11 +23,20 @@
 
 	& > img {
 		margin-right: 45px;
+
+		@include small {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__text {
 		color: $grey-text;
 
 		line-height: 24px;
+
+		@include small_mobile {
+			text-align: center;
+		}
 	}
 }
