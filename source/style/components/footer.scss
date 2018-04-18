@@ -10,12 +10,12 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		margin-bottom: 55px;
-
 		justify-content: center;
 
 		@include desctop {
 			justify-content: space-between;
+
+			margin-bottom: 55px;
 		}
 	}
 

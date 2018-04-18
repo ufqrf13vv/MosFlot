@@ -28,7 +28,11 @@
 
 		margin-bottom: 20px;
 
-		@include small_mobile {
+		@include small {
+			width: 100%;
+		}
+
+		@include mobile {
 			width: 47%;	
 		}
 

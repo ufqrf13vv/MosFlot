@@ -170,6 +170,7 @@
 
 		&-icons {
 			display: flex;
+			flex-wrap: wrap;
 		}
 
 		&-icon {
@@ -224,7 +225,7 @@
 	}
 
 	&__map {
-		height: 200px;
+		height: 300px;
 		width: auto;
 
 		@include desctop {

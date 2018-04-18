@@ -10,11 +10,15 @@
 		@include small_mobile {
 			flex-direction: column;
 			align-items: center;
+
+			margin-bottom: 20px;
 		}
 
 		@include tablet {
 			flex-direction: column;
 			align-items: center;
+
+			margin-bottom: 40px;
 		}
 
 		@include medium {
@@ -24,6 +28,10 @@
 
 	&__block {
 		padding: 70px 0;
+
+		@include small_mobile {
+			padding: 40px 0;
+		}
 
 		&--grey {
 			border-top: 2px solid #e5eef6;
@@ -55,7 +63,9 @@
 		}
 
 		@include medium {
-			padding-left: 70px;	
+			padding-left: 70px;
+
+			margin-bottom: 0;
 		}
 
 		&::before {

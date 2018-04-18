@@ -258,6 +258,10 @@
 
 		font-size: 18px;
 
+		@include tablet {
+			text-align: center;	
+		}
+
 		&_row {
 			display: flex;
 			justify-content: space-around;
@@ -268,5 +272,9 @@
 
 	&__oldprice {
 		@extend .ships-list__item-oldprice;
+
+		@include tablet {
+			text-align: center;	
+		}
 	}
 }

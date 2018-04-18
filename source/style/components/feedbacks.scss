@@ -115,6 +115,16 @@
 			justify-content: space-between;
 
 			margin-bottom: 20px;
+
+			@include small {
+				flex-direction: column;
+			}
+		}
+
+		&-title {
+			@include small {
+				margin-bottom: 20px;
+			}
 		}
 
 		&-item {
@@ -125,6 +135,10 @@
 			border: 2px solid $background;
 			border-radius: 8px;
 
+			@include small {
+				flex-direction: column;
+			}
+
 			&:not(:last-child) {
 				margin-bottom: 13px;
 			}
@@ -134,6 +148,12 @@
 			width: 20%;
 
 			padding-right: 15px;
+
+			@include small {
+				width: 100%;
+
+				margin-bottom: 30px;
+			}
 		}
 
 		&-name {
@@ -152,6 +172,10 @@
 
 			font-size: 14px;
 			line-height: 22px;
+
+			@include small {
+				width: 100%;
+			}
 		}
 	}
 }

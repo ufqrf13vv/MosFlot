@@ -122,6 +122,11 @@
                 settings: {
                     slidesToShow: 2
                 }
+            }, {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1
+                }
             }]
         });
 
