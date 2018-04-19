@@ -5,7 +5,7 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Услуги', 'Украшение теплохода'])
 
-			h2.main-title.main-title--left Украшение теплохода
+			h1.main-title.main-title--left Украшение теплохода
 			.wrapper
 				section.content.events.page
 					.events__header
@@ -80,3 +80,16 @@ block content
 											.ships-list__item-row.ships-list__item-row--end
 												a.ships-list__item-more(href="#") Подробнее
 							- }
+				aside.aside
+					.order-form
+						h2.order-form__title Заказать расчет стоимости украшения теплохода
+						.order-form__row
+							label.order-form__label(for="") Ваше имя:
+							input.order-form__input(type="text")
+						.order-form__row
+							label.order-form__label(for="") Ваш телефон:
+							input.order-form__input.order-form__input--phone(type="text")
+						.order-form__row
+							label.order-form__label(for="") Планируемая дата:
+							input.order-form__input.order-form__input--date(type="text")
+						input.order-form__submit(type="submit", value="Заказать")

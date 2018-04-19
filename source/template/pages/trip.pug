@@ -5,18 +5,18 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Прогулки', 'Прогулка'])
 
-			h2.main-title.main-title--left Прогулка
+			h1.main-title.main-title--left Прогулка
 			.wrapper
 				section.content.page.parkings.parkings--pad
 					.parkings__header
 						.parkings__header-block
-							a.parkings__header-link(href="") Расписание
+							a.parkings__header-link(href="#shedule") Расписание
 						.parkings__header-block
-							a.parkings__header-link(href="") Причал(ы)
+							a.parkings__header-link(href="#prichali") Причал(ы)
 						.parkings__header-block
-							a.parkings__header-link(href="") Продолжительность
+							a.parkings__header-link(href="#time") Продолжительность
 						.parkings__header-block
-							a.parkings__header-link(href="") Теплоходы
+							a.parkings__header-link(href="#ships") Теплоходы
 					.parkings__content.parkings__content--border
 						.item-slider__block
 							.item-slider__main-image
@@ -30,7 +30,7 @@ block content
 									img(src="/assets/img/news-item.png", alt="")
 								.item-slider__slide
 									img(src="/assets/img/news-item.png", alt="")
-						h3.title-black Прогулка
+						h2.title-black Прогулка
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sit officia molestiae ab maxime eligendi explicabo dolores dignissimos accusantium quibusdam sapiente, voluptatem ducimus nostrum tempore consectetur, esse vero atque velit!
 						.service__wrapper
 							.service__block
@@ -61,7 +61,7 @@ block content
 						p Приглашаем на оригинальные зимние речные прогулки по центру Москвы на комфортабельных белоснежных теплоходах! Во время круиза по Москве-реке вам будет предложен замечательный ужин, а приятную атмосферу на борту дополнит живая музыка и потрясающие виды набережных столицы в вечерней иллюминации, а также главных достопримечательностей города, которые вы сможете увидеть с необычного ракурса.
 						p Приглашаем на оригинальные зимние речные прогулки по центру Москвы на комфортабельных белоснежных теплоходах!
 					.parkings__content.parkings__content--border
-						h3.title-grey Маршрут прогулки
+						h2.title-grey#shedule Маршрут прогулки
 						p.parkings__route Причал «Набережная Тараса Шевченко» — Дом правительства — Мэрия Москвы — площадь Европы (Киевский вокзал) — Новодевичий монастырь — МГУ им. М.В. Ломоносова — Стадион «Лужники» — Воробьевы горы — Нескучный Сад — Центральный парк культуры и отдыха им. А М. Горького — Крымский мост — Храм Христа Спасителя — Московский Кремль — Собор Василия Блаженного — Ландшафтный парк «Зарядье» — Парящий мост (оборот) — Причал «Набережная Тараса Шевченко»
 						.parkings__map
 						.tickets
@@ -80,24 +80,27 @@ block content
 								.tickets__title Купить:
 								.tickets__row-buy
 									.tickets__sign пт
-									.tickets__time(data-name="fri17:00") 17:00
-									.tickets__time(data-name="fri20:00") 20:00
+									.tickets__time-row
+										.tickets__time(data-name="fri17:00") 17:00
+										.tickets__time(data-name="fri20:00") 20:00
 								.tickets__row-buy
 									.tickets__sign сб
-									.tickets__time.tickets__time--active(data-name="sat17:00") 17:00
-									.tickets__time(data-name="sat20:00") 20:00
-									.tickets__time(data-name="sat22:00") 22:00
+									.tickets__time-row
+										.tickets__time.tickets__time--active(data-name="sat17:00") 17:00
+										.tickets__time(data-name="sat20:00") 20:00
+										.tickets__time(data-name="sat22:00") 22:00
 								.tickets__row-buy
 									.tickets__sign вс
-									.tickets__time(data-name="sun17:00") 17:00
-									.tickets__time(data-name="sun20:00") 20:00
-									.tickets__time(data-name="sun22:00") 22:00
-									.tickets__time(data-name="sun23:00") 23:00
+									.tickets__time-row
+										.tickets__time(data-name="sun17:00") 17:00
+										.tickets__time(data-name="sun20:00") 20:00
+										.tickets__time(data-name="sun22:00") 22:00
+										.tickets__time(data-name="sun23:00") 23:00
 
-						h3.title-grey Видео маршрут прогулки
+						h2.title-grey Видео маршрут прогулки
 						.parkings__video
 
-						h3.title-grey Как добраться
+						h2.title-grey#time Как добраться
 						.parkings__map
 						.service__wrapper.service__wrapper--sb.service__wrapper--mb
 							.service__section
@@ -118,7 +121,7 @@ block content
 									li Горячие закуски
 									li Горячие закуски
 
-						h3.h3.h3--smaller Причал "Воробьевы горы"
+						h3.h3.h3--smaller#prichali Причал "Воробьевы горы"
 						.parkings__wrapper
 							.parkings__block
 								.parkings__small-map
@@ -164,7 +167,7 @@ block content
 
 					.parkings__content
 						.feedbacks__list-header
-							.title-grey Отзывы
+							.title-grey#ships Отзывы
 							.sort
 								.sort__title Сортировка:
 								select.sort__select

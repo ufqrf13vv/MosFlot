@@ -5,11 +5,11 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Прогулки на теплоходе'])
 
-			h2.main-title.main-title--left Прогулки
+			h1.main-title.main-title--left Прогулки
 			.wrapper
 				aside.aside
 					.aside__block
-						.aside__title Прогулки на теплоходе
+						h2.aside__title Прогулки на теплоходе
 						ul.aside__menu
 							li.aside__menu-item.aside__menu-item--active
 								a.aside__menu-link(href="#") Последний звонок + выпускной
@@ -32,7 +32,7 @@ block content
 					.filter
 						.filter__row
 							label.order-form__label.order-form__label--small(for="") Выберите дату прогулки:
-							input.order-form__input.order-form__input--date.order-form__input--small(type="text", placeholder="13.08.2018")
+							input.order-form__input-date.order-form__input-date--small(type="date", id="date", name="date")
 						.filter__condition
 							input.filter__radio(type="radio", name="condition", id="all")
 							label.filter__radio-label(for="all") Все прогулки

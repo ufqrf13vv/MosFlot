@@ -5,11 +5,11 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Интересное', 'Новости'])
 
-			h2.main-title.main-title--left Новости
+			h1.main-title.main-title--left Новости
 			.wrapper
 				aside.aside
 					.aside__block
-						.aside__title О нас
+						h2.aside__title О нас
 						ul.aside__menu
 							li.aside__menu-item.aside__menu-item--active
 								a.aside__menu-link(href="#") Контакты
@@ -25,13 +25,13 @@ block content
 							.item-slider__main-image
 								img(src="/assets/img/news-item.png", alt="")
 							.item-slider
-								.item-slider__slide
+								a.item-slider__slide(href="ets/img/news-item.png" data-lightbox="image")
 									img(src="/assets/img/news-item.png", alt="")
-								.item-slider__slide
+								a.item-slider__slide(href="ets/img/news-item.png" data-lightbox="image")
 									img(src="/assets/img/news-item.png", alt="")
-								.item-slider__slide
+								a.item-slider__slide(href="ets/img/news-item.png" data-lightbox="image")
 									img(src="/assets/img/news-item.png", alt="")
-								.item-slider__slide
+								a.item-slider__slide(href="ets/img/news-item.png" data-lightbox="image")
 									img(src="/assets/img/news-item.png", alt="")
 						.news-item__row
 							a.news-item__back(href="#") Назад

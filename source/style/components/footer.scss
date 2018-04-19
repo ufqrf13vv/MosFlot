@@ -29,8 +29,30 @@
 			justify-content: space-around;
 		}
 
+		@include tablet {
+			&:first-child {
+				justify-content: space-between;
+
+				width: 100%;
+
+				margin-bottom: 50px;
+			}	
+		}
+
+		@include medium {
+			&:first-child {
+				justify-content: space-around;
+
+				width: 100%;
+
+				margin-bottom: 70px;
+			}	
+		}
+
 		@include desctop {
 			&:first-child {
+				width: auto;
+
 				margin-bottom: 0;
 			}	
 		}
@@ -74,13 +96,20 @@
 		}
 
 		&-block:not(:last-of-type) {
-			margin-right: 75px;
 
 			@include small_mobile {
 				width: 100%;
 
 				margin-right: 0;
 				margin-bottom: 45px;
+			}
+
+			@include medium {
+				margin-right: 0;	
+			}
+
+			@include desctop {
+				margin-right: 75px;
 			}
 		}
 

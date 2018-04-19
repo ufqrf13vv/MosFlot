@@ -5,7 +5,7 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Расчет стоимости мероприятия'])
 
-			h2.main-title.main-title--left Расчет стоимости мероприятия
+			h1.main-title.main-title--left Расчет стоимости мероприятия
 			.wrapper
 				aside.aside
 					.order-form
@@ -17,7 +17,7 @@ block content
 								option до 35 (60) человек
 						.order-form__row.order-form__row--start
 							label.order-form__label(for="") Дата мероприятия:
-							input.order-form__input.order-form__input--date(type="text")
+							input.order-form__input-date(type="date")
 						.order-form__row.order-form__row--start
 							label.order-form__label(for="") Питание:
 							.order-form__radio-wrap
@@ -27,7 +27,8 @@ block content
 								label.order-form__radio-label(for="furshet") Фуршет									
 						.order-form__row.order-form__row--start
 							label.order-form__label(for="") Кол-во часов:
-							input.order-form__input(type="text", placeholder="5")
+							.order-form__input_wrapper
+								input.order-form__input.order-form__input--num(type="number", placeholder="5")
 						input.order-form__submit.order-form__submit--tall(type="submit", value="Рассчитать мероприятие")
 
 

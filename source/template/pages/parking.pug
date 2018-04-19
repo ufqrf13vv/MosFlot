@@ -5,11 +5,11 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Зеленые стоянки', 'Стоянка'])
 
-			h2.main-title.main-title--left Зеленые стоянки
+			h1.main-title.main-title--left Зеленые стоянки
 			.wrapper
 				aside.aside
 					.aside__block
-						.aside__title Сквер и канал им. Москвы
+						h2.aside__title Сквер и канал им. Москвы
 						ul.aside__menu
 							li.aside__menu-item.aside__menu-item--active
 								a.aside__menu-link(href="parking.html") Бухта радости
@@ -32,7 +32,7 @@ block content
 								a.aside__menu-link(href="#") Патио
 							li.aside__menu-item
 								a.aside__menu-link(href="#") Хвойный бор
-						.aside__title Центр и Серебряный бор
+						h2.aside__title Центр и Серебряный бор
 						ul.aside__menu
 							li.aside__menu-item
 								a.aside__menu-link(href="#") Викинг
@@ -48,7 +48,7 @@ block content
 						.parkings__header-block
 							a.parkings__header-link(href="") Оборудование
 					.parkings__content
-						h3.title-grey Как добраться
+						h2.title-grey Как добраться
 						p
 							ul
 								li На общественном транспорте. Пригородные автобусы до остановки "Деревня Сорокино".
@@ -59,7 +59,7 @@ block content
 							ul
 								li На теплоходе от Северного речного вокзала.
 						.parkings__map
-						h3.title-grey Погулки на теплоходах от стоянки
+						h2.title-grey Погулки на теплоходах от стоянки
 						.ships-list__slider-wrap
 							.ships-list#ships-slider
 								- var x = 5;
@@ -84,7 +84,7 @@ block content
 												.ships-list__item-row.ships-list__item-row--center
 													a.ships-list__item-more(href="#") Подробнее
 								- }
-						h3.title-grey Описание стоянки "Бухта радости"
+						h2.title-grey Описание стоянки "Бухта радости"
 						p
 							ul
 								li Пироговское водохранилище. Речная прогулка на теплоходе от СРВ займет 2 часа.
@@ -102,6 +102,6 @@ block content
 						.parkings__photos
 							- var x = 5;
 							- for (var i = 1; i <= x; i++) {
-								.parkings__photo
+								a.parkings__photo(href="/assets/img/ship-photo.jpg" data-lightbox="image")
 									img(src="/assets/img/ship-photo.jpg", alt="")
 							- }

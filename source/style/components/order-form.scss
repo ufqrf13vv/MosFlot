@@ -34,6 +34,12 @@
 		color: $blue-text;
 
 		margin-bottom: 25px;
+
+		@include tablet {
+			font-size: 16px;
+
+			white-space: pre-wrap;	
+		}
 	}
 
 	&__row {
@@ -79,20 +85,64 @@
 		border: none;
 		border-radius: 8px;
 
-		&--phone {
-			padding-left: 40px;
-		}
-
-		&--date {
-			padding-right: 40px;
-
-			background: url('../img/icon/calendar.png') no-repeat 95% 50%, $background;
-		}
-
 		&--small {
 			font-size: 14px;
 			
 			width: 140px;
+		}
+
+		&--num {
+			width: 120%;
+		}
+
+		&-date {
+			width: 100%;
+
+			font-size: 14px;
+
+			border-radius: 8px;
+			border: none;
+
+			background: url('../img/icon/calendar.png') no-repeat 90% 50%, $background;
+			color: #afbdc9;
+
+			padding: 8px 15px;
+
+			&--small {
+				width: 140px;
+			}
+
+			&::-webkit-datetime-edit-fields-wrapper { 
+				background: $background; 
+			}
+
+			&::-webkit-inner-spin-button { 
+				display: none; 
+			}
+
+			&::-webkit-calendar-picker-indicator { 
+				color: transparent;
+
+				background: url('../img/icon/calendar.png') no-repeat 55px 50%;
+
+				z-index: 10;
+			}
+		}
+
+		&-date_wrapper {
+			width: 140px;
+
+			padding: 8px 40px 8px 15px;
+
+			background: url('../img/icon/calendar.png') no-repeat 95% 50%, $background;
+
+			// overflow: hidden;
+		}
+
+		&_wrapper {
+			border-radius: 8px;
+
+			overflow-x: hidden;
 		}
 	}
 
@@ -118,6 +168,8 @@
 
 		border: none;
 		border-radius: 30px;
+
+		white-space: pre-wrap;
 
 		background: $orange-text;
 

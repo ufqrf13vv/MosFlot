@@ -15,11 +15,19 @@
 	color: $light-blue;
 
 	@include small {
+		justify-content: space-between;
+
 		padding: 0;
 	}
 
 	&__item {
-		margin-right: 10px;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		@include small {
+			margin-bottom: 10px;
+		}
 
 		&--dots {
 			margin-left: 10px;

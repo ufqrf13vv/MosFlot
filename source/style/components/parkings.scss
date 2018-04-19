@@ -99,7 +99,7 @@
 		background: url('../img/parking-map.jpg') no-repeat 0 0;
 		background-size: cover;
 
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
 
 	&__small-map {
@@ -134,20 +134,20 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		margin-bottom: -24px;
+		margin-bottom: -16px;
 	}
 
 	&__photo {
-		width: 30%;
+		width: 32%;
 
-		margin-bottom: 5%;
+		margin-bottom: 2%;
 
 		@include small {
 			width: 100%;
 		}
 
 		&:not(:nth-child(3n)) {
-			margin-right: 5%;
+			margin-right: 2%;
 
 			@include small {
 				margin-right: 0;

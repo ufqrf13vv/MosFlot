@@ -5,11 +5,11 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'О нас', 'Контакты'])
 
-			h2.main-title.main-title--left Контакты
+			h1.main-title.main-title--left Контакты
 			.wrapper
 				aside.aside
 					.aside__block
-						.aside__title О нас
+						h2.aside__title О нас
 						ul.aside__menu
 							li.aside__menu-item.aside__menu-item--active
 								a.aside__menu-link(href="#") Контакты
@@ -20,7 +20,7 @@ block content
 							li.aside__menu-item
 								a.aside__menu-link(href="#") Договора, реквизиты и оплата
 					.aside__block
-						.aside__title Интересное
+						h2.aside__title Интересное
 						ul.aside__menu
 							li.aside__menu-item
 								a.aside__menu-link(href="#") FAQ
@@ -37,7 +37,7 @@ block content
 					.contacts__row
 						.contacts__row-block
 							.contacts__wrapper.contacts__wrapper--page
-								.contacts__header Судоходная компания МосФлот
+								h3.contacts__header Судоходная компания МосФлот
 								.contacts__item.contacts__item--phone-orange
 									.contacts__block
 										a.contacts__number.contacts__number--black(href="#") 8 (495) 730-8690
@@ -61,11 +61,11 @@ block content
 						.contacts__map
 							script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab87cea64f0259566a1d95055d1dc6709c779fc61ff13d6a6dded8d1d638ff337&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true")
 					.contacts__footer
-						.contacts__header Наш офис
+						h3.contacts__header Наш офис
 						.contacts__photos
-							.contacts__photos-item
+							a.contacts__photos-item(href="/assets/img/contacts-photo.png" data-lightbox="image-1")
 								img(src="/assets/img/contacts-photo.png", alt="")
-							.contacts__photos-item
+							a.contacts__photos-item(href="/assets/img/contacts-photo.png" data-lightbox="image-2")
 								img(src="/assets/img/contacts-photo.png", alt="")
-							.contacts__photos-item
+							a.contacts__photos-item(href="/assets/img/contacts-photo.png" data-lightbox="image-3")
 								img(src="/assets/img/contacts-photo.png", alt="")

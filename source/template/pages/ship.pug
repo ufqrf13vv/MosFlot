@@ -5,16 +5,16 @@ block content
 		.container
 			+breadcrumbs(['Главная', 'Наши теплоходы', 'Теплоход Вдохновение'])
 
-			h2.main-title.main-title--left Теплоход Вдохновение
+			h1.main-title.main-title--left Теплоход Вдохновение
 			.wrapper
 				section.content.page.content--empty.content--lh
 					.parkings__header
 						.parkings__header-block
-							a.parkings__header-link(href="") 3D тур по теплоходу
+							a.parkings__header-link(href="#tour") 3D тур по теплоходу
 						.parkings__header-block
-							a.parkings__header-link(href="") Интерьер
+							a.parkings__header-link(href="#interrior") Интерьер
 						.parkings__header-block
-							a.parkings__header-link(href="") Оборудование
+							a.parkings__header-link(href="#equip") Оборудование
 					.parkings__content.parkings__content--border
 						.parkings__wrapper
 							.parkings__block
@@ -92,7 +92,7 @@ block content
 						p Теплоход "Вдохновение" или, как ласково его называют "Вдох", никого не оставит равнодушным. Он скорее похож на небольшую элегантную яхту с великолепным интерьером.
 						p Двухпалубное судно отлично подойдет, чтобы отпраздновать день рождения, свадьбу или юбилей на теплоходе
 					.parkings__content.parkings__content--border
-						h3.title-grey Прогулки на этом теплоходе
+						h2.title-grey Прогулки на этом теплоходе
 						.ships-list__slider-wrap
 							.ships-list#ships-slider
 								- var x = 5;
@@ -117,7 +117,7 @@ block content
 												.ships-list__item-row.ships-list__item-row--center
 													a.ships-list__item-more(href="#") Подробнее
 								- }
-						h3.title-grey Интерьер и планировка теплохода
+						h2.title-grey#interrior Интерьер и планировка теплохода
 						ul
 							p
 								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
@@ -130,7 +130,7 @@ block content
 							p
 								li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum exercitationem impedit molestiae magni voluptate facere, unde soluta, eaque ad corporis voluptates perferendis vero minima laborum asperiores autem quod, officia?
 					.parkings__content.parkings__content--border
-						h3.title-grey Оборудование теплохода
+						h2.title-grey#equip Оборудование теплохода
 						.service__wrapper
 							.service__block.service__block--big
 								.service__image.service__image--big
@@ -145,10 +145,10 @@ block content
 									img(src="/assets/img/icon/restaurant.png", alt="")
 								.service__desc Камбуз
 					.parkings__content.parkings__content--border
-						h3.title-grey Обслуживание
+						h2.title-grey Обслуживание
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam reiciendis atque, nobis at. Soluta saepe, eius laborum accusantium quisquam impedit quasi excepturi eveniet perferendis sequi nam ratione nostrum consequuntur reprehenderit.
 					.parkings__content.parkings__content--border
-						h3.title-grey Тех. характеристики
+						h3.title-grey#tour Тех. характеристики
 						table.separate-bold-table.parkings__table
 							tr
 								td Вместимость
@@ -166,7 +166,7 @@ block content
 								td Вместимость
 								td до 50 гостей
 					.parkings__content.parkings__content--border
-						h3.title-grey Похожие теплоходы
+						h2.title-grey Похожие теплоходы
 						.ships-list.ships-list--content
 							- var x = 2;
 							- for (var i = 0; i <= x; i++) {
@@ -199,8 +199,8 @@ block content
 							input.order-form__input(type="text")
 						.order-form__row
 							label.order-form__label(for="") Ваш телефон:
-							input.order-form__input.order-form__input--phone(type="text")
+							input.order-form__input(type="text" id="phone" placeholder="+7 ")
 						.order-form__row
 							label.order-form__label(for="") Планируемая дата:
-							input.order-form__input.order-form__input--date(type="text")
+							input.order-form__input-date(type="date")
 						input.order-form__submit(type="submit", value="Заказать")

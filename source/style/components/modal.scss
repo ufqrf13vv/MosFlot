@@ -20,6 +20,10 @@
   		left: 50%;
 
   		margin-left: -210px;
+
+  		@include small {
+  			margin-left: -150px;
+  		}
   	}
 
 	&__wrapper {
@@ -30,6 +34,12 @@
 		background: $white;
 
 		position: relative;
+
+		@include small {
+			width: 300px;
+
+			padding: 35px 20px;
+		}
 	}
 
 	&__close {
@@ -71,12 +81,22 @@
 		justify-content: space-between;
 		align-items: center;
 
+		@include small {
+			flex-direction: column;
+		}
+
 		&--center {
 			justify-content: center;
 		}
 
 		&:not(:last-child) {
 			margin-bottom: 15px;
+		}
+	}
+
+	&__label {
+		@include small {
+			margin-bottom: 10px;
 		}
 	}
 
@@ -88,6 +108,10 @@
 		background: $background;
 		border-radius: 8px;
 		border: none;
+
+		@include small {
+			width: 55%;
+		}
 	}
 
 	&__checkbox {
