@@ -113,6 +113,7 @@
             slidesToScroll: 1,
             arrows: true,
             autoplay: false,
+            swipeToSlide: true,
             responsive: [{
                 breakpoint: 960,
                 settings: {
@@ -155,6 +156,7 @@
             slidesToScroll: 1,
             arrows: false,
             dots: true,
+            swipeToSlide: true,
             autoplay: true
         });
 

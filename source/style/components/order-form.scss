@@ -129,17 +129,9 @@
 			}
 		}
 
-		&-date_wrapper {
-			width: 140px;
-
-			padding: 8px 40px 8px 15px;
-
-			background: url('../img/icon/calendar.png') no-repeat 95% 50%, $background;
-
-			// overflow: hidden;
-		}
-
 		&_wrapper {
+			width: 100%;
+
 			border-radius: 8px;
 
 			overflow-x: hidden;

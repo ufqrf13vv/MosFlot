@@ -15,7 +15,7 @@ block content
 					.events__slider#events-slider
 						- var x = 6;
 							- for (var i = 0; i <= x; i++) {
-								.events__slide
+								a.events__slide(href="/assets/img/wedding.jpg" data-lightbox="image")
 									img(src="/assets/img/wedding.jpg", alt="")
 							- }
 					.events__description
@@ -61,7 +61,7 @@ block content
 							- var x = 2;
 							- for (var i = 0; i <= x; i++) {
 								.ships-list__item
-									.ships-list__item-photo
+									a.ships-list__item-photo(href="/assets/img/ship-photo.jpg" data-lightbox="image")
 										img(src="/assets/img/ship-photo.jpg", alt="")
 									.ships-list__item-desc
 										.ships-list__item-block
@@ -88,8 +88,8 @@ block content
 							input.order-form__input(type="text")
 						.order-form__row
 							label.order-form__label(for="") Ваш телефон:
-							input.order-form__input.order-form__input--phone(type="text")
+							input.order-form__input(type="text" id="phone" placeholder="+7 ")
 						.order-form__row
 							label.order-form__label(for="") Планируемая дата:
-							input.order-form__input.order-form__input--date(type="text")
+							input.order-form__input-date(type="date")
 						input.order-form__submit(type="submit", value="Заказать")
