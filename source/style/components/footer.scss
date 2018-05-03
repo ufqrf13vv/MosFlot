@@ -163,6 +163,8 @@
 			}
 
 				&--phone {
+					top: 0;
+
 					@include small {
 						flex-direction: column;
 					}
@@ -186,6 +188,8 @@
 			&--email::before {
 				background: url('../img/footer-icons.png') no-repeat 0 0;
 
+				top: -12px;
+
 				@include small {
 					display: none;
 				}
@@ -193,6 +197,8 @@
 
 			&--address::before {
 				background: url('../img/footer-icons.png') no-repeat -120px 0;
+
+				top: -12px;
 
 				@include small {
 					display: none;

@@ -35,10 +35,13 @@
 	&__description {
 		display: flex;
 		flex-direction: column;
+		flex: 1;
 
     	padding: 25px 20px 20px 25px;
 
 		&-title {
+			width: 100%;
+
 			font-family: $medium;
 			font-weight: normal;
 
@@ -47,6 +50,8 @@
 		}
 
 		&-text {
+			width: 100%;
+
 			font-size: 14px;
 			line-height: 22px;
 		}
