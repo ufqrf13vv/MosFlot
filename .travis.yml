@@ -9,12 +9,6 @@ cache:
 install:
   - yarn install
 
-before_script:
-  - yarn start -- --silent &
-
-script:
-  - gulp
-
 deploy:
   provider: heroku
   app: mosflot
